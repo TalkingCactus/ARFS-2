@@ -26,6 +26,7 @@
 
 	min_age = 17
 	max_age = 80
+	protected = 1
 
 	blurb = "Some amalgamation of different species from across the universe,with extremely unstable DNA, making them unfit for regular cloners. \
 	Widely known for their voracious nature and violent tendencies when stressed or left unfed for long periods of time. \

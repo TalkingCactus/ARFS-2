@@ -5,6 +5,10 @@
 var/global/list/ear_styles_list = list()	// Stores /datum/sprite_accessory/ears indexed by type
 var/global/list/tail_styles_list = list()	// Stores /datum/sprite_accessory/tail indexed by type
 
+var/global/list/species_traits_good = list()	// Stores positive species 'rpg'-like traits indexed by type
+var/global/list/species_traits_neutral = list()	// Stores neutral species 'rpg'-like traits indexed by type
+var/global/list/species_traits_bad = list()		// Stores negative species 'rpg'-like traits indexed by type
+
 //stores numeric player size options indexed by name
 var/global/list/player_sizes_list = list(
 		"Macro" 	= RESIZE_HUGE,
@@ -107,7 +111,7 @@ var/global/list/tf_egg_types = list(
 	"Xenomorph"		= /obj/structure/closet/secure_closet/egg/xenomorph)
 
 /hook/startup/proc/init_vore_datum_ref_lists()
-	var/paths
+	var/list/paths
 
 	// Custom Ears
 	paths = typesof(/datum/sprite_accessory/ears) - /datum/sprite_accessory/ears
@@ -120,4 +124,18 @@ var/global/list/tf_egg_types = list(
 	for(var/path in paths)
 		var/datum/sprite_accessory/tail/instance = new path()
 		tail_styles_list[path] = instance
-	return 1 // Hooks must return 1
+
+	// Species traits
+	paths = typesof(/datum/species_trait) - /datum/species_trait
+	for(var/path in paths)
+		var/datum/species_trait/instance = new path()
+		if(instance.cost > 0)
+			species_traits_good[path] = instance
+		else if(instance.cost < 0)
+			species_traits_bad[path] = instance
+		else
+			species_traits_neutral[path] = instance
+
+
+	// Hooks must return 1
+	return 1
