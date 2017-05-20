@@ -1136,7 +1136,11 @@
 		species.remove_inherent_verbs(src)
 		holder_type = null
 
-	species = all_species[new_species]
+	//VOREStation Edit
+	var/datum/species/proto = all_species[new_species]
+	var/datum/species/instance = new proto.type()
+	species = instance
+	//VOREStation Edit End
 
 	if(species.language)
 		add_language(species.language)

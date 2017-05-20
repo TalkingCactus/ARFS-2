@@ -8,6 +8,7 @@ var/global/list/tail_styles_list = list()	// Stores /datum/sprite_accessory/tail
 var/global/list/species_traits_good = list()	// Stores positive species 'rpg'-like traits indexed by type
 var/global/list/species_traits_neutral = list()	// Stores neutral species 'rpg'-like traits indexed by type
 var/global/list/species_traits_bad = list()		// Stores negative species 'rpg'-like traits indexed by type
+var/global/list/species_traits_orig = list()	// Stores original species traits indexed by type
 
 //stores numeric player size options indexed by name
 var/global/list/player_sizes_list = list(
@@ -129,7 +130,9 @@ var/global/list/tf_egg_types = list(
 	paths = typesof(/datum/species_trait) - /datum/species_trait
 	for(var/path in paths)
 		var/datum/species_trait/instance = new path()
-		if(instance.cost > 0)
+		if(instance.cost == "sp")
+			species_traits_orig[path] = instance
+		else if(instance.cost > 0)
 			species_traits_good[path] = instance
 		else if(instance.cost < 0)
 			species_traits_bad[path] = instance
