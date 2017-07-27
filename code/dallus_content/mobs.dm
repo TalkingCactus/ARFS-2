@@ -192,16 +192,16 @@
 	icon_dead = "eevee_d"
 	desc = "Gotta catch 'em all!"
 	icon = 'icons/mob/pokemon.dmi'
-//	var/pokeball
 	pixel_x = -16
-//	ventcrawler = 2
-	health = 100
-	maxHealth = 100
-	layer = 4
+	health = 50
+	maxHealth = 50
 	response_help = "pets"
 	wander = 1
-	turns_per_move = 2
-//	pass_flags = PASSTABLE | PASSMOB
+	turns_per_move = 5
+	universal_understand = 1
+	universal_speak = 1
+	density = 0//stop fucking pushing me, I'm trying to cook
+	layer = MOB_LAYER
 
 /mob/living/simple_animal/pokemon/proc/simple_lay_down()
 	set name = "Rest"

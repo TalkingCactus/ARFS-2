@@ -28,6 +28,10 @@
 
 // CREWQUARTERS/DORM
 
+/area/crew_quarters/sauna
+	name = "\improper Sauna"
+	icon_state = "recreation_area"
+
 /area/crew_quarters/sleep/Dorm_1/holo
 	name = "\improper Dorm 1 Holodeck"
 	icon_state = "dk_yellow"
@@ -101,4 +105,6 @@
 	name = "\improper Micro Maintenance"
 /area/maintenance/station/virology
 	name = "\improper Virology Maintenance"
-
+/area/maintenance/game_room
+	name = "Game Room"
+	icon_state = "amaint"

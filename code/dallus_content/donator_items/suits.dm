@@ -8,6 +8,7 @@
 	vision_restriction = 0
 	siemens_coefficient = 0
 	w_class = ITEMSIZE_SMALL
+	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 	emp_protection = 0
 	slowdown = 3
 	offline_slowdown = 5
