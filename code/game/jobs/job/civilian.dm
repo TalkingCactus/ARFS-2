@@ -12,7 +12,7 @@
 	idtype = /obj/item/weapon/card/id/civilian
 	access = list(access_hydroponics, access_bar, access_kitchen)
 	minimal_access = list(access_bar)
-	alt_titles = list("Barista")
+	alt_titles = list("Barista", "Mixologist", "Barmaid", "Taverner")
 
 
 /datum/job/bartender/equip(var/mob/living/carbon/human/H, var/alt_title)
@@ -50,7 +50,7 @@
 	idtype = /obj/item/weapon/card/id/civilian
 	access = list(access_hydroponics, access_bar, access_kitchen)
 	minimal_access = list(access_kitchen)
-	alt_titles = list("Cook")
+	alt_titles = list("Cook", "Baker", "Sous Chef", "Teppanyaki Chef", "Pastry Chef")
 
 
 /datum/job/chef/equip(var/mob/living/carbon/human/H, var/alt_title)

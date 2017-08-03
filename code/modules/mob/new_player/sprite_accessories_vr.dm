@@ -6,7 +6,7 @@
 
 /datum/sprite_accessory/hair
 
-	species_allowed = list("Human","Skrell","Unathi","Tajara", "Teshari", "Nevrean", "Akula", "Sergal", "Flatland Zorren", "Highlander Zorren", "Vulpkanin", "Xenochimera", "Xenomorph Hybrid","Lugia","Datashark","Grovyle","Eevee","Glaceon","Shiny Glaceon","Flareon","Absol","Lucky") //This lets all races use the default hairstyles.
+	species_allowed = list("Human","Skrell","Unathi","Tajara", "Teshari", "Nevrean", "Akula", "Sergal", "Flatland Zorren", "Highlander Zorren", "Vulpkanin", "Xenochimera", "Xenomorph Hybrid","Lugia","Datashark","Grovyle","Eevee","Glaceon","Shiny Glaceon","Flareon","Absol","Lucky", "Vulpix", "Subteranean Slime") //This lets all races use the default hairstyles.
 
 	sergal_plain
 		name = "Sergal Plain"
