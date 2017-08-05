@@ -114,3 +114,133 @@ obj/item/weapon/fleshlight
 	icon_state = "anal_beads"
 	item_state = "anal_beads"
 	attack_verb = list("beadwhips", "beads")
+
+/obj/item/toy/plushie/corgi
+	name = "corgi plushie"
+	icon_state = "corgi"
+
+/obj/item/toy/plushie/girly_corgi
+	name = "corgi plushie"
+	icon_state = "girlycorgi"
+
+/obj/item/toy/plushie/robo_corgi
+	name = "borgi plushie"
+	icon_state = "robotcorgi"
+
+/obj/item/toy/plushie/octopus
+	name = "octopus plushie"
+	icon_state = "loveable"
+
+/obj/item/toy/plushie/face_hugger
+	name = "facehugger plushie"
+	icon_state = "huggable"
+
+//foxes are basically the best
+
+/obj/item/toy/plushie/red_fox
+	name = "red fox plushie"
+	icon_state = "redfox"
+
+/obj/item/toy/plushie/black_fox
+	name = "black fox plushie"
+	icon_state = "blackfox"
+
+/obj/item/toy/plushie/marble_fox
+	name = "marble fox plushie"
+	icon_state = "marblefox"
+
+/obj/item/toy/plushie/blue_fox
+	name = "blue fox plushie"
+	icon_state = "bluefox"
+
+/obj/item/toy/plushie/orange_fox
+	name = "orange fox plushie"
+	icon_state = "orangefox"
+
+/obj/item/toy/plushie/coffee_fox
+	name = "coffee fox plushie"
+	icon_state = "coffeefox"
+
+/obj/item/toy/plushie/pink_fox
+	name = "pink fox plushie"
+	icon_state = "pinkfox"
+
+/obj/item/toy/plushie/purple_fox
+	name = "purple fox plushie"
+	icon_state = "purplefox"
+
+/obj/item/toy/plushie/crimson_fox
+	name = "crimson fox plushie"
+	icon_state = "crimsonfox"
+
+/obj/item/toy/plushie/deer
+	name = "deer plushie"
+	icon_state = "deer"
+
+/obj/item/toy/plushie/black_cat
+	name = "black cat plushie"
+	icon_state = "blackcat"
+
+/obj/item/toy/plushie/grey_cat
+	name = "grey cat plushie"
+	icon_state = "greycat"
+
+/obj/item/toy/plushie/white_cat
+	name = "white cat plushie"
+	icon_state = "whitecat"
+
+/obj/item/toy/plushie/orange_cat
+	name = "orange cat plushie"
+	icon_state = "orangecat"
+
+/obj/item/toy/plushie/siamese_cat
+	name = "siamese cat plushie"
+	icon_state = "siamesecat"
+
+/obj/item/toy/plushie/tabby_cat
+	name = "tabby cat plushie"
+	icon_state = "tabbycat"
+
+/obj/item/toy/plushie/tuxedo_cat
+	name = "tuxedo cat plushie"
+	icon_state = "tuxedocat"
+
+/obj/item/toy/plushie/ice
+	icon_state = "icecarp"
+	name = "ice carp plushie"
+
+/obj/item/toy/plushie/silent
+	icon_state = "silentcarp"
+	name = "silent carp plushie"
+
+/obj/item/toy/plushie/electric
+	icon_state = "electriccarp"
+	name = "electric carp plushie"
+
+/obj/item/toy/plushie/gold
+	icon_state = "goldcarp"
+	name = "gold carp plushie"
+
+/obj/item/toy/plushie/toxin
+	icon_state = "toxincarp"
+	name = "toxic carp plushie"
+	
+/obj/item/toy/plushie/dragon
+	icon_state = "dragoncarp"
+	name = "dragon carp plushie"
+
+/obj/item/toy/plushie/pink
+	icon_state = "pinkcarp"
+	name = "pink carp plushie"
+
+/obj/item/toy/plushie/candy
+	icon_state = "candycarp"
+	name = "candy carp plushie"
+
+/obj/item/toy/plushie/nebula
+	icon_state = "nebulacarp"
+	name = "nebula carp plushie"
+
+/obj/item/toy/plushie/void
+	icon_state = "voidcarp"
+	name = "void carp plushie"

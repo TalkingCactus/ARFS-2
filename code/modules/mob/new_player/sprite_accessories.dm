@@ -17,6 +17,8 @@
 	conversion in savefile.dm
 */
 
+// Just a reminder for myself "Datashark","Grovyle","Eevee","Glaceon","Shiny Glaceon","Flareon","Absol","Lucky"  -- Jonathan
+
 /datum/sprite_accessory
 
 	var/icon			// the icon file the accessory is located in
@@ -29,7 +31,7 @@
 	var/gender = NEUTER
 
 	// Restrict some styles to specific species
-	var/list/species_allowed = list("Human")
+	var/list/species_allowed = list()
 
 	// Whether or not the accessory can be affected by colouration
 	var/do_colouration = 1
@@ -51,7 +53,7 @@
 		name = "Bald"
 		icon_state = "bald"
 		gender = MALE
-		species_allowed = list("Human","Unathi")
+		species_allowed = list("Human","Unathi","Lugia","Datashark","Grovyle","Eevee","Glaceon","Shiny Glaceon","Flareon","Absol","Lucky")
 
 	short
 		name = "Short Hair"	  // try to capatilize the names please~
@@ -199,12 +201,12 @@
 	bobcurl
 		name = "Bobcurl"
 		icon_state = "hair_bobcurl"
-		species_allowed = list("Human","Unathi")
+		species_allowed = list("Human","Unathi","Lugia","Datashark","Grovyle","Eevee","Glaceon","Shiny Glaceon","Flareon","Absol","Lucky")
 
 	bob
 		name = "Bob"
 		icon_state = "hair_bobcut"
-		species_allowed = list("Human","Unathi")
+		species_allowed = list("Human","Unathi","Lugia","Datashark","Grovyle","Eevee","Glaceon","Shiny Glaceon","Flareon","Absol","Lucky")
 
 	bobcutalt
 		name = "Chin Length Bob"
@@ -334,7 +336,7 @@
 	mohawk
 		name = "Mohawk"
 		icon_state = "hair_d"
-		species_allowed = list("Human","Unathi")
+		species_allowed = list("Human","Unathi","Lugia","Datashark","Grovyle","Eevee","Glaceon","Shiny Glaceon","Flareon","Absol","Lucky")
 
 	jensen
 		name = "Adam Jensen Hair"
@@ -351,7 +353,7 @@
 	spiky
 		name = "Spiky"
 		icon_state = "hair_spikey"
-		species_allowed = list("Human","Unathi")
+		species_allowed = list("Human","Unathi","Lugia","Datashark","Grovyle","Eevee","Glaceon","Shiny Glaceon","Flareon","Absol","Lucky")
 
 	kusangi
 		name = "Kusanagi Hair"
@@ -633,7 +635,7 @@
 		name = "Shaved"
 		icon_state = "bald"
 		gender = NEUTER
-		species_allowed = list("Human","Unathi","Tajara","Skrell", "Machine","Teshari", "Vox")
+		species_allowed = list("Human","Unathi","Tajara","Skrell", "Machine","Teshari", "Vox","Lugia","Datashark","Grovyle","Eevee","Glaceon","Shiny Glaceon","Flareon","Absol","Lucky")
 
 	watson
 		name = "Watson Mustache"
@@ -1310,3 +1312,51 @@
 		icon_state = "default"
 		icon = 'icons/mob/human_races/r_skrell.dmi'
 		species_allowed = list("Skrell")
+
+/*
+// ARFS Markings for donator races, here for now.
+
+/datum/sprite_accessory/marking/arfs
+	icon = 'icons/mob/human_races/markings_arfs.dmi'
+	do_colouration = 1
+	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_TORSO,BP_GROIN,BP_HEAD)
+
+
+	flareon_m_1
+		name = "Flareon Layer 1 M"
+		icon = 'icons/mob/human_races/markings_arfs.dmi'
+		icon_state = "m_flareon_1"
+		species_allowed = list("Flareon")
+
+	flareon_m_2
+		name = "Flareon Layer 2 M"
+		icon = 'icons/mob/human_races/markings_arfs.dmi'
+		icon_state = "m_flareon_2"
+		species_allowed = list("Flareon")
+
+	flareon_f_1
+		name = "Flareon Layer 1 F"
+		icon = 'icons/mob/human_races/markings_arfs.dmi'
+		icon_state = "f_flareon_1"
+		species_allowed = list("Flareon")
+
+	flareon_f_2
+		name = "Flareon Layer 2 F"
+		icon = 'icons/mob/human_races/markings_arfs.dmi'
+		icon_state = "f_flareon_2"
+		species_allowed = list("Flareon")
+
+
+
+	lugia_m_1
+		name = "Lugia Layer 1 M"
+		icon = 'icons/mob/human_races/markings_arfs.dmi'
+		icon_state = "malelugia1"
+		species_allowed = list("Lugia")
+
+	lugia_m_2
+		name = "Lugia Layer 2 M"
+		icon = 'icons/mob/human_races/markings_arfs.dmi'
+		icon_state = "malelugia2"
+		species_allowed = list("Lugia")
+*/

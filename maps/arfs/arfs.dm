@@ -1,6 +1,6 @@
 #if !defined(USING_MAP_DATUM)
 
-// 1 = main, 2 = mining, 3 = centcomm, 4 = hotel, 5 = empty
+// 1 = main, 2 = centcomm, 3 = empty, 4 = hotel, 5 = mining
 
 
 	#include "arfs-1.dmm"

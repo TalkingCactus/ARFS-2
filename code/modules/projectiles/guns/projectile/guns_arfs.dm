@@ -13,6 +13,7 @@
 	recoil = 1.5
 	fire_sound = 'sound/weapons/SVD_shot.ogg'
 	move_delay = 1
+	burst_delay = 2
 	item_icons = list(
 		slot_l_hand_str = 'icons/mob/items/lefthand_guns_arfs.dmi',
 		slot_r_hand_str = 'icons/mob/items/righthand_guns_arfs.dmi',
@@ -87,7 +88,7 @@
 	icon_state = "mp40"
 	icon_override = 'icons/obj/gun_arfs.dmi'
 	fire_delay = 1
-	fire_sound = 'sound/weapons/Gunshot_light.ogg'
+	fire_sound = 'sound/weapons/gunshot_glock.ogg'
 	recoil = 0.1
 	item_icons = list(
 		slot_l_hand_str = 'icons/mob/items/lefthand_guns_arfs.dmi',
@@ -122,7 +123,7 @@
 	icon_state = "ppsh"
 	fire_delay = 0
 	recoil = 2 //It's a PPSH, fucker.
-	fire_sound = 'sound/weapons/SVD_shot.ogg'
+	fire_sound = 'sound/weapons/uzi.ogg'
 	item_state = "ppsh"
 	item_icons = list(
 		slot_l_hand_str = 'icons/mob/items/lefthand_guns_arfs.dmi',
@@ -157,8 +158,9 @@
 	icon_state = "dp28"
 	fire_delay = 2
 	recoil = 1.5
-	fire_sound = 'sound/weapons/machinegun.ogg'
+	fire_sound = 'sound/weapons/gunshot_rifle.ogg'
 	move_delay = 0
+	burst_delay = 3
 	item_icons = list(
 		slot_l_hand_str = 'icons/mob/items/lefthand_guns_arfs.dmi',
 		slot_r_hand_str = 'icons/mob/items/righthand_guns_arfs.dmi',
@@ -198,13 +200,13 @@
 	w_class = ITEMSIZE_LARGE
 	force = 15
 	slot_flags = 0
-	burst_delay = 1.1
+	burst_delay = 2
 	max_shells = 100
 	caliber = "7.62x54"
 	origin_tech = list(TECH_COMBAT = 7, TECH_MATERIAL = 1, TECH_ILLEGAL = 2)
 	slot_flags = SLOT_BACK
 	ammo_type = "/obj/item/ammo_casing/a762x54"
-	fire_sound = 'sound/weapons/SVD_shot.ogg'
+	fire_sound = 'sound/weapons/gunshot_rifle.ogg'
 	load_method = MAGAZINE
 	magazine_type = /obj/item/ammo_magazine/pkm
 	allowed_magazines = list(/obj/item/ammo_magazine/pkm, /obj/item/ammo_magazine/pkm/ext)
@@ -226,7 +228,7 @@
 		icon_state = "pkm-empty"
 
 /obj/item/weapon/gun/projectile/automatic/mg34
-	name = "MG34 light machinegun"
+	name = "MG32 light machinegun"
 	desc = "This thing sounds like a buzzsaw when it fires, because of it's incredibly high rate of fire. Useful for making an entire hallway of enemies into swiss cheese. Uses 7.92x57mm Mauser."
 	icon = 'icons/obj/gun_arfs.dmi'
 	icon_state = "l6closed100"
@@ -306,7 +308,7 @@
 	..()
 
 /obj/item/weapon/gun/projectile/automatic/mg34/plus
-	name = "MG34 light machinegun"
+	name = "MG32 light machinegun"
 	desc = "This thing sounds like a buzzsaw when it fires, because of it's incredibly high rate of fire. Useful for making an entire hallway of enemies into swiss cheese. You feel like using this on the fifth firing mode is a bad idea... Uses 7.92x57mm Mauser."
 	icon = 'icons/obj/gun_arfs.dmi'
 	icon_state = "l6closed100"
@@ -334,9 +336,9 @@
 	firemodes = list(
 		list(mode_name="semiauto",       burst=1, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
 		list(mode_name="3-round bursts", burst=3, fire_delay=null, move_delay=0,    burst_accuracy=list(0,-1,-1), dispersion=list(0.0, 0.6, 1.0)),
-		list(mode_name="short bursts",	burst=5, move_delay=0, burst_accuracy = list(0,-1,-1,-2,-2), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)),
-		list(mode_name="long bursts",	burst=10, move_delay=0, burst_accuracy = list(0,-1,-1,-2,-2,0,-1,-1,-2,-2), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2)),
-		list(mode_name="magdump",	burst=50, move_delay=0, burst_accuracy = list(0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2)), //SO LOOONG. IN REGARDS TO THIS CODE SEGMENT, AND TO ANYONE WHO GETS SHOT WHILE THE GUN IS IN THIS MODE.
+		list(mode_name="short bursts",	burst=5, move_delay=3, burst_accuracy = list(0,-1,-1,-2,-2), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2)),
+		list(mode_name="long bursts",	burst=10, move_delay=3, burst_accuracy = list(0,-1,-1,-2,-2,0,-1,-1,-2,-2), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2)),
+		list(mode_name="magdump",	burst=50, move_delay=6, burst_accuracy = list(0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2)), //SO LOOONG. IN REGARDS TO THIS CODE SEGMENT, AND TO ANYONE WHO GETS SHOT WHILE THE GUN IS IN THIS MODE.
 		list(mode_name="TOKI WO TOMARE?",	burst=100, move_delay=0, burst_accuracy = list(0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2,0,-1,-1,-2,-2), dispersion = list(0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2, 0.6, 1.0, 1.0, 1.0, 1.2)) //end my suffering
 		)
 
@@ -345,7 +347,7 @@
 	desc = "Rush B, cyka blyat. Uses 7.62x39mm rounds."
 	icon = 'icons/obj/gun_arfs.dmi'
 	icon_state = "akm"
-	fire_delay = 0
+	fire_delay = 1
 	fire_sound = 'sound/weapons/SVD_shot.ogg'
 	recoil = 1
 	move_delay = 0
@@ -363,8 +365,8 @@
 	allowed_magazines = list(/obj/item/ammo_magazine/akm, /obj/item/ammo_magazine/akm/rubber)
 
 	firemodes = list(
-		list(mode_name="semiauto",       burst=1, burst_delay=0, fire_delay=0,    move_delay=null, burst_accuracy=null, dispersion=null),
-		list(mode_name="3-round bursts", burst=3, burst_delay=1, fire_delay=null, move_delay=1,    burst_accuracy=list(0,-1,-2), dispersion=list(0.0, 0.6, 0.6))
+		list(mode_name="semiauto",       burst=1, burst_delay=0, fire_delay=1,    move_delay=null, burst_accuracy=null, dispersion=null),
+		list(mode_name="3-round bursts", burst=3, burst_delay=1, fire_delay=null, move_delay=3,    burst_accuracy=list(0,-1,-2), dispersion=list(0.0, 0.6, 0.6))
 		)
 
 /obj/item/weapon/gun/projectile/automatic/akm/update_icon()
@@ -396,7 +398,7 @@
 	icon = 'icons/obj/gun_arfs.dmi'
 	icon_state = "aks"
 	fire_delay = 0
-	fire_sound = 'sound/weapons/gunshot.ogg'
+	fire_sound = 'sound/weapons/gunshot_glock.ogg'
 	recoil = 1
 	move_delay = 0
 	item_state = "aks"
@@ -453,34 +455,24 @@
 	else
 		icon_state = "tokarev-e"
 
-/obj/item/weapon/gun/projectile/vice
-	name = "Vice"
-	desc = "It's a black Romanian Tokarev TT pistol. It has wooden grip panels that're colored maroon, and an inscription on the slide that simply says 'Vice'. There is no serial number or any identification. Uses 7.62x25mm TT."
+/obj/item/weapon/gun/projectile/lugeralt
+	name = "P08 Luger"
 	icon = 'icons/obj/gun_arfs.dmi'
-	fire_delay = 0
-	move_delay = 0
-	icon_state = "btokarev"
-	item_state = "tokarev"
-	item_icons = list(
-		slot_l_hand_str = 'icons/mob/items/lefthand_guns_arfs.dmi',
-		slot_r_hand_str = 'icons/mob/items/righthand_guns_arfs.dmi',
-		)
-	w_class = ITEMSIZE_NORMAL
-	fire_sound = 'sound/weapons/pistol.ogg'
-
-	caliber = "tokarev"
-	ammo_type = /obj/item/ammo_casing/tokarev
-	magazine_type = /obj/item/ammo_magazine/tokarev
-	allowed_magazines = list(/obj/item/ammo_magazine/tokarev, /obj/item/ammo_magazine/tokarev/rubber)
+	desc = "A legitimate, non-reproduction P08 luger, from Nazi Germany. Perfect for a military officer. Uses 9mm rounds."
+	icon_state = "p08"
+	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 2)
+	caliber = "9mm"
 	load_method = MAGAZINE
-	origin_tech = list(TECH_COMBAT = 4, TECH_MATERIAL = 4)
+	fire_sound = 'sound/weapons/holdout.ogg'
+	magazine_type = /obj/item/ammo_magazine/mc9mm
+	allowed_magazines = list(/obj/item/ammo_magazine/mc9mm)
 
-/obj/item/weapon/gun/projectile/vice/update_icon()
+/obj/item/weapon/gun/projectile/lugeralt/update_icon()
 	..()
 	if(ammo_magazine)
-		icon_state = "btokarev"
+		icon_state = "luger"
 	else
-		icon_state = "btokarev-e"
+		icon_state = "luger-e"
 
 /obj/item/weapon/gun/projectile/automatic/m4a1
 	name = "M4A1"
@@ -488,7 +480,7 @@
 	icon = 'icons/obj/gun_arfs.dmi'
 	icon_state = "m4"
 	fire_delay = 0
-	fire_sound = 'sound/weapons/Gunshot.ogg'
+	fire_sound = 'sound/weapons/SVD_shot.ogg'
 	recoil = 1
 	move_delay = 0
 	item_state = "m4"
@@ -516,28 +508,28 @@
 	else
 		icon_state = "m4-empty"
 
-/obj/item/weapon/gun/energy/gun/burst/energyshotgun
-	name = "WKC-GPES Mk.I"
-	desc = "Have you ever wanted to use a shotgun that has little recoil, hits instantly, and penetrates armor like it doesn't exist? Yes? Then this is the gun for you! The newest weapon from the ever-growing WKC company."
-	icon = 'icons/obj/gun_arfs.dmi'
-	icon_state = "eshotgun100"
-	item_state = "bullpup"
-	burst = 10
-	burst_delay = 0
-	projectile_type = /obj/item/projectile/beam/shotgun
-	modifystate = "eshotgun"
-	fire_sound='sound/weapons/lasercannonfire.ogg'
-	charge_cost = 25
-	force = 15
-	w_class = ITEMSIZE_NORMAL
-	fire_delay = 0
-	origin_tech = list(TECH_COMBAT = 7, TECH_MAGNET = 6, TECH_ILLEGAL = 6)
-	one_handed_penalty = 0
-
-	firemodes = list(
-		list(mode_name="standard", burst=10, burst_delay = 0, fire_delay=null, move_delay=0, burst_accuracy=list(0,0,0), dispersion=list(0.0, 1.0, 1.5), projectile_type=/obj/item/projectile/beam/shotgun, fire_sound='sound/weapons/lasercannonfire.ogg'),
-		list(mode_name="concentrated", burst=5, burst_delay = 0, fire_delay=null, move_delay=0, burst_accuracy=list(0,0,0), dispersion=list(0.0, 0.2, 0.3), projectile_type=/obj/item/projectile/beam/shotgun, fire_sound='sound/weapons/lasercannonfire.ogg')
-		)
+///obj/item/weapon/gun/energy/gun/burst/energyshotgun
+//	name = "WKC-GPES Mk.I"
+//	desc = "Have you ever wanted to use a shotgun that has little recoil, hits instantly, and penetrates armor like it doesn't exist? Yes? Then this is the gun for you! The newest weapon from the ever-growing WKC company."
+//	icon = 'icons/obj/gun_arfs.dmi'
+//	icon_state = "eshotgun100"
+//	item_state = "bullpup"
+//	burst = 10
+//	burst_delay = 0
+//	projectile_type = /obj/item/projectile/beam/shotgun
+//	modifystate = "eshotgun"
+//	fire_sound='sound/weapons/lasercannonfire.ogg'
+//	charge_cost = 25
+//	force = 15
+//	w_class = ITEMSIZE_NORMAL
+//	fire_delay = 0
+//	origin_tech = list(TECH_COMBAT = 7, TECH_MAGNET = 6, TECH_ILLEGAL = 6)
+//	one_handed_penalty = 0
+//
+//	firemodes = list(
+//		list(mode_name="standard", burst=10, burst_delay = 0, fire_delay=null, move_delay=0, burst_accuracy=list(0,0,0), dispersion=list(0.0, 1.0, 1.5), projectile_type=/obj/item/projectile/beam/shotgun, fire_sound='sound/weapons/lasercannonfire.ogg'),
+//		list(mode_name="concentrated", burst=5, burst_delay = 0, fire_delay=null, move_delay=0, burst_accuracy=list(0,0,0), dispersion=list(0.0, 0.2, 0.3), projectile_type=/obj/item/projectile/beam/shotgun, fire_sound='sound/weapons/lasercannonfire.ogg')
+//		)
 
 /obj/item/weapon/gun/energy/captain/retrotech
 	name = "Retrotech laser rifle"
@@ -579,17 +571,15 @@
 	force = 5
 	slot_flags = SLOT_BELT
 	w_class = ITEMSIZE_SMALL
-	fire_sound = 'sound/weapons/lasercannonfire.ogg'
-	projectile_type = /obj/item/projectile/beam/wkcstrong
+	fire_sound = 'sound/weapons/laser3.ogg'
+	projectile_type = /obj/item/projectile/beam/xray
 	origin_tech = null
 	fire_delay = 0
-	charge_cost = 2400
 	self_recharge = 1
 	recharge_time = 5
 	charge_delay = 50
 	firemodes = list(
-		list(mode_name="HP-lethal (WARNING, VERY DANGEROUS)", projectile_type=/obj/item/projectile/beam/wkcstrong, 'sound/effects/supermatter.ogg', charge_cost = 2400), //YOU ONLY GET ONE SHOT.
-		list(mode_name="LP-lethal", projectile_type=/obj/item/projectile/beam/xray, fire_sound='sound/weapons/Laser3.ogg', charge_cost = 200),
+		list(mode_name="lethal", projectile_type=/obj/item/projectile/beam/xray, fire_sound='sound/weapons/Laser3.ogg', charge_cost = 200),
 		list(mode_name="disable", projectile_type=/obj/item/projectile/beam/disable/retro, fire_sound='sound/weapons/eLuger.ogg', charge_cost = 100),
 		)
 
@@ -629,7 +619,7 @@
     icon_state = "omnilaser"
     nodamage = 1
     taser_effect = 1
-    agony = 50 //two shot stun?!?!?!!?!
+    agony = 52 //two shot stun?!?!?!!?!
     damage_type = HALLOSS
     light_color = "#00CECE"
 
@@ -861,7 +851,7 @@
 	desc = "A 7.62x39mm casing. Smells like Cosmoline."
 	icon_state = "rifle-casing"
 	caliber = "7.62x39"
-	projectile_type = /obj/item/projectile/bullet/rifle/a762
+	projectile_type = /obj/item/projectile/bullet/rifle/a556/ap
 
 /obj/item/ammo_casing/a762x39/rubber
 	desc = "A 7.62x39mm rubber casing. Smells like Cosmoline and police brutality."
@@ -879,7 +869,7 @@
 	desc = "A 5.54x39mm rubber bullet casing. Smells like Vodka and police brutality."
 	icon_state = "rifle-casing"
 	caliber = "5.54x39"
-	projectile_type = /obj/item/projectile/bullet/rifle/a556/ap
+	projectile_type = /obj/item/projectile/bullet/rubber/aks
 
 /obj/item/projectile/bullet/rubber/akm //WHY THE FUCK NOT, RIGHT?!
 	name = "rubber rifle bullet"
@@ -980,17 +970,3 @@
 
 /obj/item/projectile/bullet/pistol/mild //for the .454 Casull
 	damage = 50
-
-/obj/item/projectile/beam/wkcstrong
-	name = "hyper-condensed energy blast"
-	damage = 90
-	light_range = 3
-	light_power = 1
-	light_color = "#8C0AFF"
-	armor_penetration = 1000
-	icon_state = "omnilaser"
-	muzzle_type = /obj/effect/projectile/darkmatter/muzzle
-	tracer_type = /obj/effect/projectile/darkmatter/tracer
-	impact_type = /obj/effect/projectile/darkmatter/impact
-
-

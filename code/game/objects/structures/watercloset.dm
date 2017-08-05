@@ -254,9 +254,15 @@
 			if(H.gloves && washgloves)
 				if(H.gloves.clean_blood())
 					H.update_inv_gloves(0)
-			if(H.shoes && washshoes)
-				if(H.shoes.clean_blood())
-					H.update_inv_shoes(0)
+			if(washshoes)
+				if(H.shoes)
+					if(H.shoes.clean_blood())
+						H.update_inv_shoes(0)
+				else
+					H.feet_blood_DNA = null
+					H.track_blood = null
+					H.feet_blood_color = null
+					H.regenerate_icons()
 			if(H.wear_mask && washmask)
 				if(H.wear_mask.clean_blood())
 					H.update_inv_wear_mask(0)

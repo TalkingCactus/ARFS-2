@@ -12,7 +12,7 @@
 	idtype = /obj/item/weapon/card/id/civilian
 	access = list(access_hydroponics, access_bar, access_kitchen)
 	minimal_access = list(access_bar)
-	alt_titles = list("Barista")
+	alt_titles = list("Barista", "Mixologist", "Barmaid", "Taverner")
 
 
 /datum/job/bartender/equip(var/mob/living/carbon/human/H, var/alt_title)
@@ -50,7 +50,7 @@
 	idtype = /obj/item/weapon/card/id/civilian
 	access = list(access_hydroponics, access_bar, access_kitchen)
 	minimal_access = list(access_kitchen)
-	alt_titles = list("Cook")
+	alt_titles = list("Cook", "Baker", "Sous Chef", "Teppanyaki Chef", "Pastry Chef", "Fry Cook", "Burger Flipper", "Culinary Artist")
 
 
 /datum/job/chef/equip(var/mob/living/carbon/human/H, var/alt_title)
@@ -78,7 +78,7 @@
 	idtype = /obj/item/weapon/card/id/civilian
 	access = list(access_hydroponics, access_bar, access_kitchen)
 	minimal_access = list(access_hydroponics)
-	alt_titles = list("Hydroponicist")
+	alt_titles = list("Hydroponicist", "Farmer", "Horticulturalist", "Florist")
 
 
 /datum/job/hydro/equip(var/mob/living/carbon/human/H, var/alt_title)
@@ -163,15 +163,15 @@
 	department = "Cargo"
 	department_flag = CIVILIAN
 	faction = "Station"
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 4
+	spawn_positions = 4
 	supervisors = "the quartermaster and the head of personnel"
 	selection_color = "#515151"
 	idtype = /obj/item/weapon/card/id/cargo
 	economic_modifier = 5
 	access = list(access_maint_tunnels, access_mailsorting, access_cargo, access_cargo_bot, access_mining, access_mining_station)
 	minimal_access = list(access_mining, access_mining_station, access_mailsorting)
-	alt_titles = list("Drill Technician","Prospector")
+	alt_titles = list("Drill Technician", "Prospector", "Asteroid Miner", "Liscenced Adventurer", "Astro-Medic", "Smithy")
 
 /datum/job/mining/equip(var/mob/living/carbon/human/H, var/alt_title)
 	if(!H)	return 0
@@ -238,7 +238,7 @@
 	idtype = /obj/item/weapon/card/id/civilian
 	access = list(access_library, access_maint_tunnels)
 	minimal_access = list(access_library)
-	alt_titles = list("Journalist", "Professor", "Historian", "Writer")
+	alt_titles = list("Journalist", "Professor", "Historian", "Writer", "Poet", "Cataloger", "Archivist", "Chronicler", "Reporter")
 
 
 /datum/job/librarian/equip(var/mob/living/carbon/human/H, var/alt_title)
@@ -266,6 +266,7 @@
 	economic_modifier = 7
 	access = list(access_lawyer, access_sec_doors, access_maint_tunnels, access_heads)
 	minimal_access = list(access_lawyer, access_sec_doors, access_heads)
+	alt_titles = list("Diplomat", "Health Inspector", "Public Defender", "Lawyer") 
 	minimal_player_age = 7
 
 

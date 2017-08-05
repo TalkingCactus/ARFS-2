@@ -84,6 +84,10 @@
 	desc = "Don't worry, it's not closed."
 	outdoors = FALSE
 
+/turf/simulated/floor/water/pool/white//colorable version
+	icon_state = "water_shallow_white"
+	water_state = "water_shallow_white"
+
 /mob/living/proc/can_breathe_water()
 	return FALSE
 

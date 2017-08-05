@@ -6,7 +6,7 @@ var/datum/antagonist/mutineer/mutineers
 	role_text_plural = "Mutineers"
 	id = MODE_MUTINEER
 	antag_indicator = "mutineer"
-	restricted_jobs = list("Colony Director")
+	restricted_jobs = list("Captain")
 
 /datum/antagonist/mutineer/New(var/no_reference)
 	..()
@@ -39,7 +39,7 @@ var/datum/antagonist/mutineer/mutineers
 	proc/get_head_loyalist_candidates()
 		var/list/candidates[0]
 		for(var/mob/loyalist in player_list)
-			if(loyalist.mind && loyalist.mind.assigned_role == "Colony Director")
+			if(loyalist.mind && loyalist.mind.assigned_role == "Captain")
 				candidates.Add(loyalist.mind)
 		return candidates
 

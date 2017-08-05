@@ -146,3 +146,81 @@
 	do_colouration = 1
 
 
+/*
+////////////////////////////
+/  =--------------------=  /
+/  == Taur Definitions ==  /
+/  =--------------------=  /
+////////////////////////////
+*/
+/datum/sprite_accessory/tail/taur/panther
+	name = "Panther"
+	icon_state = "panther_s"
+	do_colouration = 1
+
+/datum/sprite_accessory/tail/taur/tajaran
+	name = "Tajaran"
+	icon_state = "tajaran_s"
+	do_colouration = 1
+
+/datum/sprite_accessory/tail/taur/lab
+	name = "Lab"
+	icon_state = "lab_s"
+	do_colouration = 0
+
+/datum/sprite_accessory/tail/taur/shepherd
+	name = "Shepherd"
+	icon_state = "shepherd_s"
+	do_colouration = 0
+
+/datum/sprite_accessory/tail/taur/fox
+	name = "Fox"
+	icon_state = "fox_s"
+	do_colouration = 0
+
+/datum/sprite_accessory/tail/taur/husky
+	name = "Husky"
+	icon_state = "husky_s"
+	do_colouration = 0
+
+/datum/sprite_accessory/tail/taur/cow
+	name = "Cow"
+	icon_state = "cow_s"
+	do_colouration = 0
+
+/datum/sprite_accessory/tail/taur/naga2
+	name = "Naga 2"
+	icon_state = "snake_s"
+	do_colouration = 1
+
+/datum/sprite_accessory/tail/taur/drider
+	name = "Drider"
+	icon_state = "drider_s"
+	do_colouration = 1
+
+/datum/sprite_accessory/tail/taur/drake
+	name = "Drake"
+	icon_state = "drake_s"
+	do_colouration = 0
+
+/datum/sprite_accessory/tail/taur/otie
+	name = "Otie"
+	icon_state = "otie_s"
+	do_colouration = 0
+/* Looks awful from the front
+/datum/sprite_accessory/tail/taur/skunk
+	name = "Skunk"
+	icon_state = "skunk_s"
+	do_colouration = 0
+ //Not adding this just yet, it looks pretty bad.
+/datum/sprite_accessory/tail/taur/pudd
+	name = "Pudd"
+	icon_state = "pudd_s"
+	do_colouration = 0
+*/
+
+/datum/sprite_accessory/tail/taur/westfire
+	name = "Scorpion"
+	icon_state = "westfire_s"
+	do_colouration = 0
+	ckeys_allowed = list("westfire")

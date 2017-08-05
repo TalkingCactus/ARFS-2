@@ -1,8 +1,8 @@
 #define Z_LEVEL_MAIN_ARFS					1
-#define Z_LEVEL_MINING_ARFS					2
-#define Z_LEVEL_CENTCOM_ARFS				3
+#define Z_LEVEL_CENTCOM_ARFS				2
+#define Z_LEVEL_EMPTY_ARFS					3
 #define Z_LEVEL_HOTEL_ARFS					4
-#define Z_LEVEL_EMPTY_ARFS					5
+#define Z_LEVEL_MINING_ARFS					5
 
 
 /datum/map/arfs
@@ -32,28 +32,27 @@
 		Z_LEVEL_MINING_ARFS
 		)
 
-	accessible_z_levels = list("1" = 5, "4" = 15, "5" = 20, "2" = 25) // The defines can't be used here sadly.
+	accessible_z_levels = list("1" = 5, "3" = 60, "4" = 15, "5" = 20) // The defines can't be used here sadly.
 
-
-	base_turf_by_z = list("2" = /turf/simulated/mineral/floor)
+	base_turf_by_z = list("5" = /turf/simulated/mineral/floor)
 
 // to do: change accordingly for arfs.
 
 	station_name  = "ARFS Dallus"
 	station_short = "ARFS"
 	dock_name     = "the docking area"
-	boss_name     = "Fenin"
-	boss_short    = "Fen"
+	boss_name     = "ARFS"
+	boss_short    = "ARFS"
 	company_name  = "ARFS"
 	company_short = "ARFS"
 	starsys_name  = "Arf"
 
-	shuttle_docked_message = "The scheduled shuttle to the %dock_name% has docked with the station at docks one and two. It will depart in approximately %ETD%."
-	shuttle_leaving_dock = "The Crew Transfer Shuttle has left the station. Estimate %ETA% until the shuttle docks at %dock_name%."
+	shuttle_docked_message = "The scheduled shuttle to the %dock_name% has docked with the ship at docks one and two. It will depart in approximately %ETD%."
+	shuttle_leaving_dock = "The Crew Transfer Shuttle has left the ship. Estimate %ETA% until the shuttle docks at %dock_name%."
 	shuttle_called_message = "A crew transfer to %Dock_name% has been scheduled. The shuttle has been called. Those leaving should procede to docks one and two in approximately %ETA%"
 	shuttle_recall_message = "The scheduled crew transfer has been cancelled."
-	emergency_shuttle_docked_message = "The Emergency Shuttle has docked with the station at docks one and two. You have approximately %ETD% to board the Emergency Shuttle."
-	emergency_shuttle_leaving_dock = "The Emergency Shuttle has left the station. Estimate %ETA% until the shuttle docks at %dock_name%."
+	emergency_shuttle_docked_message = "The Emergency Shuttle has docked with the ship at docks one and two. You have approximately %ETD% to board the Emergency Shuttle."
+	emergency_shuttle_leaving_dock = "The Emergency Shuttle has left the ship. Estimate %ETA% until the shuttle docks at %dock_name%."
 	emergency_shuttle_called_message = "An emergency evacuation shuttle has been called. It will arrive at docks one and two in approximately %ETA%"
 	emergency_shuttle_recall_message = "The emergency shuttle has been recalled."
 

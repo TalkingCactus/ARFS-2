@@ -442,6 +442,7 @@
 	name = "birthday jumpsuit"
 	desc = "A jumpsuit you can wear to be nude and still wear  your PDA, and a collar. However, if security sees you 'nude' they can still arrest you for public nudiity."
 	icon_state = "birthdaysuit"
+	icon_override = 'code/dallus_content/icons/uniforms1.dmi' //the on-mob icon file since they fill up fast
 
 /obj/item/clothing/under/purpleskirt
 	name = "purple skirt"

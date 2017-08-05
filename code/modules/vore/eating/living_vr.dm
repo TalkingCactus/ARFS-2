@@ -351,6 +351,7 @@
 // Master vore proc that actually does vore procedures
 //
 /mob/living/proc/perform_the_nom(var/mob/living/user, var/mob/living/prey, var/mob/living/pred, var/belly)
+
 	//Sanity
 	if(!user || !prey || !pred || !belly || !(belly in pred.vore_organs))
 		log_debug("[user] attempted to feed [prey] to [pred], via [belly] but it went wrong.")
@@ -375,6 +376,11 @@
 	else //Feeding someone to another person
 		attempt_msg = text("<span class='warning'>[] is attempting to make [] [] [] into their []!</span>",user,pred,lowertext(belly_target.vore_verb),prey,lowertext(belly_target.name))
 		success_msg = text("<span class='warning'>[] manages to make [] [] [] into their []!</span>",user,pred,lowertext(belly_target.vore_verb),prey,lowertext(belly_target.name))
+
+	// Check to see if SSD, if SSD, return.
+	if(ishuman(prey) && !prey.client)
+		pred << "You have an urge not to [belly_target.vore_verb] this SSD prey."
+		return
 
 	// Announce that we start the attempt!
 	user.visible_message(attempt_msg)

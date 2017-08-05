@@ -77,6 +77,8 @@
 	// Species-specific sprite sheets for inventory sprites
 	// Works similarly to worn sprite_sheets, except the alternate sprites are used when the clothing/refit_for_species() proc is called.
 	var/list/sprite_sheets_obj = list()
+	//onmob_icon should point to a .dmi file where the on-mob icon is held. If this is set, it will override the default files set in ../_defines/mobs.dm but will still let you use species-specific icons too
+	var/icon_onmob = null
 
 /obj/item/New()
 	..()

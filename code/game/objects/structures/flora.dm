@@ -223,6 +223,7 @@
 	desc = "Really brings the room together."
 	icon = 'icons/obj/plants.dmi'
 	icon_state = "plant-01"
+	layer = 5
 
 /obj/structure/flora/pottedplant/large
 	name = "large potted plant"

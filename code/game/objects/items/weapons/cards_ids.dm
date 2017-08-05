@@ -233,12 +233,12 @@
 	access = list(access_syndicate, access_external_airlocks)
 
 /obj/item/weapon/card/id/captains_spare
-	name = "colony director's spare ID"
+	name = "Captain's spare ID"
 	desc = "The spare ID of the High Lord himself."
 	icon_state = "gold"
 	item_state = "gold_id"
-	registered_name = "Colony Director"
-	assignment = "Colony Director"
+	registered_name = "Captain"
+	assignment = "Captain"
 /obj/item/weapon/card/id/captains_spare/New()
 	access = get_all_station_access()
 	..()

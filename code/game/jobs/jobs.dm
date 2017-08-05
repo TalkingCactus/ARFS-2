@@ -52,7 +52,7 @@ var/list/assistant_occupations = list(
 
 
 var/list/command_positions = list(
-	"Colony Director",
+	"Captain",
 	"Head of Personnel",
 	"Head of Security",
 	"Chief Engineer",

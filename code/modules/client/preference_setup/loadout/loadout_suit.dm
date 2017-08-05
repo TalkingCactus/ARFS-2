@@ -245,9 +245,9 @@
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat
 
 /datum/gear/suit/wintercoat/captain
-	display_name = "winter coat, colony director"
+	display_name = "winter coat, Captain"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/captain
-	allowed_roles = list("Colony Director")
+	allowed_roles = list("Captain")
 
 /datum/gear/suit/wintercoat/security
 	display_name = "winter coat, security"

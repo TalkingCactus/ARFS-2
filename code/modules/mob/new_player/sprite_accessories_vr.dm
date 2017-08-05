@@ -6,7 +6,7 @@
 
 /datum/sprite_accessory/hair
 
-	species_allowed = list("Human","Skrell","Unathi","Tajara", "Teshari", "Nevrean", "Akula", "Sergal", "Flatland Zorren", "Highlander Zorren", "Vulpkanin", "Xenochimera", "Xenomorph Hybrid") //This lets all races use the default hairstyles.
+	species_allowed = list("Human","Skrell","Unathi","Tajara", "Teshari", "Nevrean", "Akula", "Sergal", "Flatland Zorren", "Highlander Zorren", "Vulpkanin", "Xenochimera", "Xenomorph Hybrid","Lugia","Datashark","Grovyle","Eevee","Glaceon","Shiny Glaceon","Flareon","Absol","Lucky") //This lets all races use the default hairstyles.
 
 	sergal_plain
 		name = "Sergal Plain"
@@ -425,6 +425,18 @@
 		name = "Tusks"
 		icon_state = "tusks"
 		body_parts = list(BP_HEAD)
+
+	m_dragon_belly
+		name = "Male Dragon Belly"
+		icon_state = "male_dragon_belly"
+		body_parts = list(BP_TORSO,BP_GROIN)
+		do_colouration = 1
+
+	f_dragon_belly
+		name = "Female Dragon Belly"
+		icon_state = "female_dragon_belly"
+		body_parts = list(BP_GROIN,BP_TORSO)
+		do_colouration = 1
 
 
 /*

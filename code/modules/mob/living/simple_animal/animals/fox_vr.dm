@@ -181,8 +181,8 @@
 //Captain fox
 /mob/living/simple_animal/fox/fluff/Renault
 	name = "Renault"
-	desc = "Renault, the Colony Director's trustworthy fox. I wonder what it says?"
-	befriend_job = "Colony Director"
+	desc = "Renault, the Captain's trustworthy fox. I wonder what it says?"
+	befriend_job = "Captain"
 
 /mob/living/simple_animal/fox/fluff/Renault/New()
 	if(!vore_organs.len)

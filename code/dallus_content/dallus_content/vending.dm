@@ -277,3 +277,73 @@
 	/obj/item/clothing/accessory/collar/pink = 4,/obj/item/clothing/accessory/collar/holo = 4,
 	/obj/item/clothing/under/stripper/stripper_pink = 4, /obj/item/clothing/under/stripper/stripper_green = 4,
 	/obj/item/clothing/under/stripper/mankini = 4)
+
+/obj/machinery/vending/thingpony/toy
+	name = "Toy Vendor"
+	desc = "A cute teddy bear! It can give you toys!"
+	product_ads = "Action figures!"
+	icon_state = "toy"
+	vend_reply = "Get to donk-ing!"
+	products = list(/obj/item/toy/plushie/corgi=5, /obj/item/toy/plushie/girly_corgi=5,
+	/obj/item/toy/plushie/robo_corgi=5, /obj/item/toy/plushie/octopus=5,
+	/obj/item/toy/plushie/face_hugger=5, /obj/item/toy/plushie/red_fox=5,
+	/obj/item/toy/plushie/black_fox=5, /obj/item/toy/plushie/marble_fox=5,
+	/obj/item/toy/plushie/blue_fox=5, /obj/item/toy/plushie/orange_fox=5,
+	/obj/item/toy/plushie/coffee_fox=5, /obj/item/toy/plushie/pink_fox=5,
+	/obj/item/toy/plushie/purple_fox=5, /obj/item/toy/plushie/crimson_fox=5,
+	/obj/item/toy/plushie/deer=5, /obj/item/toy/plushie/black_cat=5,
+	/obj/item/toy/plushie/grey_cat=5, /obj/item/toy/plushie/white_cat=5,
+	/obj/item/toy/plushie/orange_cat=5, /obj/item/toy/plushie/siamese_cat=5,
+	/obj/item/toy/plushie/tabby_cat=5, /obj/item/toy/plushie/tuxedo_cat=5,
+	/obj/item/toy/plushie/ice=5, /obj/item/toy/plushie/silent=5,
+	/obj/item/toy/plushie/electric=5, /obj/item/toy/plushie/gold=5,
+	/obj/item/toy/plushie/toxin=5, /obj/item/toy/plushie/dragon=5,
+	/obj/item/toy/plushie/pink=5, /obj/item/toy/plushie/candy=5,
+	/obj/item/toy/plushie/nebula=5, /obj/item/toy/plushie/void=5,
+	/obj/item/toy/plushie/rune=5)
+
+/obj/machinery/vending/rune/rachelco
+	name = "Rachel.Co drink vendor"
+	desc = "A very dirty vendor, owned by a company called Rachel.Co, it dispenses very lewd drinks."
+	icon_state = "rachelco"
+	vend_reply = "Ah~"
+	idle_power_usage = 211
+	products = list(/obj/item/weapon/reagent_containers/food/drinks/cans/beer_cum=5,/obj/item/weapon/reagent_containers/food/drinks/cans/vodka_cum=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/gum_cum=5,/obj/item/weapon/reagent_containers/food/drinks/cans/liquor_cum=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/banana_smoothie=5,/obj/item/weapon/reagent_containers/food/drinks/cans/grape_smoothie=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/orange_smoothie=5,/obj/item/weapon/reagent_containers/food/drinks/cans/watermelon_smoothie=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/pear_smoothie=5,/obj/item/weapon/reagent_containers/food/drinks/cans/strawberry_smoothie=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/durian_smoothie=5,/obj/item/weapon/reagent_containers/food/drinks/cans/lemon_smoothie=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/apple_smoothie=5,/obj/item/weapon/reagent_containers/food/drinks/cans/kiwi_smoothie=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/cherry_smoothie=5,/obj/item/weapon/reagent_containers/food/drinks/cans/coconut_smoothie=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/cranberry_smoothie=5,/obj/item/weapon/reagent_containers/food/drinks/cans/grapefruit_smoothie=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/mango_smoothie=5,/obj/item/weapon/reagent_containers/food/drinks/cans/peach_smoothie=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/pineapple_smoothie=5,/obj/item/weapon/reagent_containers/food/drinks/cans/plum_smoothie=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/raspberry_smoothie=5,/obj/item/weapon/reagent_containers/food/drinks/cans/peanut_smoothie=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/protein_choc=5,/obj/item/weapon/reagent_containers/food/drinks/cans/protein_straw=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/protein_bana=5,/obj/item/weapon/reagent_containers/food/drinks/cans/protein_vani=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/protein_cara=5,/obj/item/weapon/reagent_containers/food/drinks/cans/protein_pean=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/protein_kiwi=5,/obj/item/weapon/reagent_containers/food/drinks/cans/protein_wmel=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/protein_apple=5,/obj/item/weapon/reagent_containers/food/drinks/cans/protein_semen=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/protein_pear=5,/obj/item/weapon/reagent_containers/food/drinks/cans/protein_raspberry=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/energy_drink=5,/obj/item/weapon/reagent_containers/food/drinks/cans/r_cola=5)
+	contraband = list(/obj/item/weapon/reagent_containers/food/drinks/cans/aphro=5,/obj/item/weapon/reagent_containers/food/drinks/cans/specialmix=5)
+	prices = list(/obj/item/weapon/reagent_containers/food/drinks/cans/beer_cum=5,/obj/item/weapon/reagent_containers/food/drinks/cans/vodka_cum=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/gum_cum=5,/obj/item/weapon/reagent_containers/food/drinks/cans/liquor_cum=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/banana_smoothie=5,/obj/item/weapon/reagent_containers/food/drinks/cans/grape_smoothie=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/orange_smoothie=5,/obj/item/weapon/reagent_containers/food/drinks/cans/watermelon_smoothie=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/pear_smoothie=5,/obj/item/weapon/reagent_containers/food/drinks/cans/strawberry_smoothie=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/durian_smoothie=5,/obj/item/weapon/reagent_containers/food/drinks/cans/lemon_smoothie=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/apple_smoothie=5,/obj/item/weapon/reagent_containers/food/drinks/cans/kiwi_smoothie=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/cherry_smoothie=5,/obj/item/weapon/reagent_containers/food/drinks/cans/coconut_smoothie=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/cranberry_smoothie=5,/obj/item/weapon/reagent_containers/food/drinks/cans/grapefruit_smoothie=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/mango_smoothie=5,/obj/item/weapon/reagent_containers/food/drinks/cans/peach_smoothie=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/pineapple_smoothie=5,/obj/item/weapon/reagent_containers/food/drinks/cans/plum_smoothie=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/raspberry_smoothie=5,/obj/item/weapon/reagent_containers/food/drinks/cans/peanut_smoothie=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/protein_choc=5,/obj/item/weapon/reagent_containers/food/drinks/cans/protein_straw=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/protein_bana=5,/obj/item/weapon/reagent_containers/food/drinks/cans/protein_vani=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/protein_cara=5,/obj/item/weapon/reagent_containers/food/drinks/cans/protein_pean=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/protein_kiwi=5,/obj/item/weapon/reagent_containers/food/drinks/cans/protein_wmel=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/protein_apple=5,/obj/item/weapon/reagent_containers/food/drinks/cans/protein_semen=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/protein_pear=5,/obj/item/weapon/reagent_containers/food/drinks/cans/protein_raspberry=5,
+	/obj/item/weapon/reagent_containers/food/drinks/cans/energy_drink=5,/obj/item/weapon/reagent_containers/food/drinks/cans/r_cola=5)

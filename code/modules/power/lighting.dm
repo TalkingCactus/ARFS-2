@@ -164,7 +164,7 @@
 	var/on = 0					// 1 if on, 0 if off
 	var/brightness_range = 10	// luminosity when on, also used in power calculation
 	var/brightness_power = 3
-	var/brightness_color = null
+	var/brightness_color = "#FFF4E5"
 	var/status = LIGHT_OK		// LIGHT_OK, _EMPTY, _BURNED or _BROKEN
 	var/flickering = 0
 	var/light_type = /obj/item/weapon/light/tube		// the type of light item
@@ -177,6 +177,7 @@
 	var/shows_alerts = TRUE		// Flag for if this fixture should show alerts.  Make sure icon states exist!
 	var/current_alert = null	// Which alert are we showing right now?
 
+
 // the smaller bulb light fixture
 
 /obj/machinery/light/small
@@ -185,7 +186,7 @@
 	fitting = "bulb"
 	brightness_range = 6
 	brightness_power = 2
-	brightness_color = "#FFF4E5"
+	brightness_color = "#FFD299"
 	desc = "A small lighting fixture."
 	light_type = /obj/item/weapon/light/bulb
 	shows_alerts = FALSE
@@ -198,7 +199,7 @@
 	brightness_range = 5
 	brightness_power = 2
 	layer = OBJ_LAYER
-	brightness_color = "#FFF4E5"
+	brightness_color = "#FFD299"
 	desc = "A floor lamp."
 	light_type = /obj/item/weapon/light/bulb
 	shows_alerts = FALSE
