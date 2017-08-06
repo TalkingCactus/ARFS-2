@@ -59,7 +59,6 @@ var/global/list/obj/item/device/communicator/all_communicators = list()
 							list("module" = "Phone", "icon" = "phone64", "number" = 2),
 							list("module" = "Contacts", "icon" = "person64", "number" = 3),
 							list("module" = "Messaging", "icon" = "comment64", "number" = 4),
-							list("module" = "Chatrooms", "icon" = "comment64", "number" = 7),
 							list("module" = "Note", "icon" = "note64", "number" = 5),
 							list("module" = "Settings", "icon" = "gear64", "number" = 6)
 							)	//list("module" = "Name of Module", "icon" = "icon name64", "number" = "what tab is the module")
