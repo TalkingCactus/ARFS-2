@@ -38,14 +38,14 @@
 
 // to do: change accordingly for arfs.
 
-	station_name  = "ARFS Dallus"
-	station_short = "ARFS"
+	station_name  = "A.R.F.S. Dallus"
+	station_short = "Dallus"
 	dock_name     = "the docking area"
-	boss_name     = "ARFS"
-	boss_short    = "ARFS"
-	company_name  = "ARFS"
-	company_short = "ARFS"
-	starsys_name  = "Arf"
+	boss_name     = "ARF - Command"
+	boss_short    = "ARF - Command"
+	company_name  = "Alliance of Racial Federations"
+	company_short = "A.R.F."
+	starsys_name  = "Canis Majoris - Watermelonus Cluster IV"
 
 	shuttle_docked_message = "The scheduled shuttle to the %dock_name% has docked with the ship at docks one and two. It will depart in approximately %ETD%."
 	shuttle_leaving_dock = "The Crew Transfer Shuttle has left the ship. Estimate %ETA% until the shuttle docks at %dock_name%."
