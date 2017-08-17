@@ -195,6 +195,7 @@
 #include "code\dallus_content\items\ties.dm"
 #include "code\dallus_content\items\uniforms.dm"
 #include "code\dallus_content\items\weapons.dm"
+#include "code\dallus_content\machinery\lighting_arfs.dm"
 #include "code\datums\ai_law_sets.dm"
 #include "code\datums\ai_laws.dm"
 #include "code\datums\browser.dm"
