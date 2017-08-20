@@ -5,11 +5,12 @@
 #define Z_LEVEL_SPACE_LOW				5
 #define Z_LEVEL_SPACE_MID				6
 #define Z_LEVEL_SPACE_HIGH				7
-#define Z_LEVEL_CENTCOM					9
-#define Z_LEVEL_MISC					10
-#define Z_LEVEL_SHIPS					11
-#define Z_LEVEL_EMPTY_SURFACE			12
-#define Z_LEVEL_EMPTY_SPACE				13
+#define Z_LEVEL_CENTCOM					8
+#define Z_LEVEL_MISC					9
+#define Z_LEVEL_SHIPS					10
+#define Z_LEVEL_EMPTY_SURFACE			11
+#define Z_LEVEL_EMPTY_SPACE				12
+#define Z_LEVEL_TRANSIT					13
 
 /datum/map/mars
 	name = "Mars"
@@ -38,6 +39,22 @@
 	emergency_shuttle_leaving_dock = "The Emergency Shuttle has left the station. Estimate %ETA% until the shuttle docks at %dock_name%."
 	emergency_shuttle_called_message = "An emergency evacuation shuttle has been called. It will arrive at docks one and two in approximately %ETA%"
 	emergency_shuttle_recall_message = "The emergency shuttle has been recalled."
+
+
+/datum/map/mars/get_map_levels(var/srcz, var/long_range = TRUE)
+	if (long_range && (srcz in map_levels))
+		return map_levels
+	else if (srcz == Z_LEVEL_TRANSIT)
+		return list() // Nothing on transit!
+	else if (srcz >= Z_LEVEL_SURFACE && srcz <= Z_LEVEL_SPACE_HIGH)
+		return list(
+			Z_LEVEL_SURFACE,
+			Z_LEVEL_UNDERGROUND,
+			Z_LEVEL_SPACE_LOW,
+			Z_LEVEL_SPACE_MID,
+			Z_LEVEL_SPACE_HIGH)
+	else
+		return ..()
 
 /datum/map_z_level/mars/surface
 	z = Z_LEVEL_SURFACE

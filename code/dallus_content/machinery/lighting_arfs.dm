@@ -6,9 +6,9 @@
 	icon_state = "redlbulb"
 	base_state = "redlbulb"
 	item_state = "contvapour"
-	matter = list("glass" = 100)
-	brightness_range = 6
-	brightness_power = 2
+	matter = list("glass" = 80)
+	brightness_range = 3
+	brightness_power = 1
 	brightness_color = "#ff0000"
 
 
@@ -20,8 +20,8 @@
 	base_state = "redltube"
 	item_state = "c_tube"
 	matter = list("glass" = 100)
-	brightness_range = 9
-	brightness_power = 2
+	brightness_range = 5
+	brightness_power = 1
 	brightness_color = "#ff0000"
 
 /* Keeping this for reference
@@ -69,6 +69,7 @@
 	light_type = /obj/item/weapon/light/bulb/red
 	light_color = "#FF0000"
 	brightness_color = "#FF0000"
+
 
 /obj/item/weapon/storage/box/lights/mixed/red
 	name = "box of red replacement bulbs"
