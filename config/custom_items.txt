@@ -4,6 +4,8 @@
 # req_access is going to be a shit to maintain since the config file can't grab constants and has to use integers, use it minimally.
 # Separate titles with a single comma and a space (', ') or they'll bork.
 #
+## Cebutris here. Gonna be going through all the stuff here, figuring out who gets what and when. I'll comment on most things that aren't obvious, and tag my comments with --C
+#
 # EX:
 # {
 # ckey: zuhayr
@@ -48,18 +50,20 @@ item_path: /obj/item/weapon/melee/fluff/holochain/Zippy
 }
 
 # ######## A CKEYS
+# No armor, so it should be good --C
 {
 ckey: adk09
 character_name: Lethe
 item_path: /obj/item/clothing/head/helmet/hos/fluff/lethe
 }
-
+# Not sure how I feel about non-admins getting centcomm stuff. This can be changed. --C
 {
 ckey: arokha
 character_name: Aronai Kadigan
 item_path: /obj/item/clothing/under/utility/expeditionary/medical/command
 item_name: centcom medical uniform
 item_desc: A medical uniform straight from Central Command.
+req_titles: Centcom Officer, Centcom Visitor
 }
 
 {
@@ -68,18 +72,21 @@ character_name: Aronai Kadigan
 item_path: /obj/item/clothing/suit/storage/service/expeditionary/medical/command
 item_name: centcom medical jacket
 item_desc: A medical jacket straight from Central Command.
-}
 
-{
-ckey: arokha
-character_name: Aronai Kadigan
-item_path: /obj/item/weapon/storage/backpack/satchel/gen/fluff/aronai
+req_titles: Centcom Officer, Centcom Visitor
 }
-
+# Contains a hypospray, centcom stuff, and med huds....... and a net gun. --C
+#{
+#ckey: arokha
+#character_name: Aronai Kadigan
+#item_path: /obj/item/weapon/storage/backpack/satchel/gen/fluff/aronai
+#}
+# Contains a pistol with flash rounds --C
 {
 ckey: aerowing
 character_name: Sebastian Aji
 item_path: /obj/item/weapon/storage/box/fluff/sebastian_aji
+req_titles: Security Officer, Warden, Detective, Head of Security, Captain
 }
 # ######## B CKEYS
 {
@@ -106,13 +113,14 @@ character_name: Xin Xiao
 item_path: /obj/item/clothing/under/soviet
 item_desc: This soviet uniform has seen considerable use over the years, it's rather worn in some places, frayed in others and the stomach region has signs of being stretched out repeatedly.
 }
-
+#Contains fluffy detective stuff, a loyalty implant, and a commented out mateba. it kind of bugs me. The comment says that they need to "renew their permit". Does virgo require people to keep paying to get their guns??? --C
 {
 ckey: bwoincognito
 character_name: Tasald Corlethian
 item_path: /obj/item/weapon/storage/box/fluff/tasald
+req_titles: Security Officer, Warden, Detective, Head of Security, Head of Personnel, Research Director, Chief Medical Officer, Chief Engineer, Captain
 }
-
+#Nothing special here except for a medical hud. I think it's alright to let it slide --C
 {
 ckey: bwoincognito
 character_name: Octavious Ward
@@ -120,6 +128,8 @@ item_path: /obj/item/weapon/storage/box/fluff/octavious
 }
 
 # ######## C CKEYS
+
+# GET DAT FUKKEN DISK --C
 {
 ckey: cockatricexl
 character_name: James Holder
@@ -127,36 +137,37 @@ item_path: /obj/item/weapon/disk/data
 }
 
 # ######## D CKEYS
+# RIP --C
 {
 ckey: deepindigo
 character_name: Amina Dae-Kouri
 item_path: /obj/item/weapon/storage/bible/fluff/amina
 }
-
+# This is the first medal of many. Don't think they're that bad. --C
 {
 ckey: dhaeleena
 character_name: Dhaeleena M'iar
 item_path: /obj/item/clothing/accessory/medal/silver/security/fluff/dhael
 }
+# HAHAHAHHAAHAA. no. --C
+#{
+#ckey: dhaeleena
+#character_name: Dhaeleena M'iar
+#item_path: /obj/item/weapon/gun/projectile/revolver/mateba/fluff/dhael
+#}
 
-{
-ckey: dhaeleena
-character_name: Dhaeleena M'iar
-item_path: /obj/item/weapon/gun/projectile/revolver/mateba/fluff/dhael
-}
-
-{
-ckey: dhaeleena
-character_name: Dhaeleena M'iar
-item_path: /obj/item/fluff/permit/dhaeleena_miar
-}
+#{
+#ckey: dhaeleena
+#character_name: Dhaeleena M'iar
+#item_path: /obj/item/fluff/permit/dhaeleena_miar
+#}
 
 {
 ckey: dickfreedomjohnson
 character_name: Elliot Richards
 item_path: /obj/item/clothing/accessory/medal/medical
 }
-
+# I recall the champion belt being a traitor objective at some point. Can't verify. --C
 {
 ckey: dickfreedomjohnson
 character_name: Elliot Richards
@@ -165,6 +176,7 @@ item_path: /obj/item/weapon/storage/belt/champion
 
 # ######## E CKEYS
 # Needs to renew permit. Uncomment when renewed.
+# Again, this shit bugs me. "renew their permit"??? --C
 #{
 #ckey: eekasqueak
 #character_name: Serkii Miishy
@@ -198,19 +210,19 @@ item_path: /obj/item/clothing/accessory/medal/bronze_heart
 # ######## F CKEYS
 # ######## G CKEYS
 # ######## H CKEYS
+# No thanks --C
+#{
+#ckey: hottokeeki
+#character_name: Belle Day
+#item_path: /obj/item/weapon/gun/energy/sizegun
+#}
 
-{
-ckey: hottokeeki
-character_name: Belle Day
-item_path: /obj/item/weapon/gun/energy/sizegun
-}
-
-{
-ckey: hottokeeki
-character_name: Belle Day
-item_path: /obj/item/weapon/gun/energy/netgun
-}
-
+#{
+#ckey: hottokeeki
+#character_name: Belle Day
+#item_path: /obj/item/weapon/gun/energy/netgun
+#}
+# This is the first of the three reagent generator implants. Their really gross in how they're designed (though nothing wrong with the kink itself). Basically, when you implant yourself, you begin to generate milk (or chococlate milk, in once case) and get messages about your breasts being full and stuff. Anyone beside you can milk you. It's strange, but not bad to have. --C
 {
 ckey: hottokeeki
 character_name: Belle Day
@@ -218,7 +230,7 @@ item_path: /obj/item/weapon/implanter/reagent_generator/belle
 }
 
 # ######## I CKEYS
-
+#matches, cigs, a fluff thing that changes the look (but not access) of your ID, a beret, and a cake. --C
 {
 ckey: ivymoomoo
 character_name: Ivy Baladeva
@@ -238,7 +250,7 @@ ckey: jacobdragon
 character_name: Earthen Breath
 item_path: /obj/item/clothing/head/fluff/hairflowerpin
 }
-
+# Pirate stuff. No weapons. Yarr!
 {
 ckey: jemli
 character_name: Cirra Mayhem
@@ -250,49 +262,51 @@ ckey: jemli
 character_name: Jemli
 item_path: /obj/item/clothing/head/fedora/fluff/jemli
 }
-
-{
-ckey: jertheace
-character_name: Jeremiah 'Ace' Acacius
-item_path: /obj/item/weapon/storage/box/fluff/ace
-}
+# I couldn't find this with the rest of the boxes, but I DID find a fluff/ace shotgun, which is more powerful than a regular armory shotgun. Commenting this out to be safe. --C
+#{
+#ckey: jertheace
+#character_name: Jeremiah 'Ace' Acacius
+#item_path: /obj/item/weapon/storage/box/fluff/ace
+#}
 
 {
 ckey: jertheace
 character_name: Jeremiah 'Ace' Acacius
 item_path: /obj/item/clothing/shoes/boots/combat
 }
-
+# ERT uniform. Same armor value as sec jumpsuits --C
 {
 ckey: jertheace
 character_name: Jeremiah 'Ace' Acacius
 item_path: /obj/item/clothing/under/syndicate/combat
+req_titles: Security Officer, Warden, Detective, Head of Security, Head of Personnel, Captain
 }
 
 {
 ckey: jertheace
 character_name: Jeremiah 'Ace' Acacius
 item_path: /obj/item/clothing/suit/armor/tactical/officer/fluff/ace
+req_titles: Security Officer, Warden, Detective, Head of Security, Head of Personnel, Captain
 }
-
-{
-ckey: joanrisu
-character_name: Joan Risu
-item_path: /obj/item/weapon/storage/backpack/dufflebag/sec/fluff/joanrisu
-}
-
-{
-ckey: joanrisu
-character_name: Katarina Eine
-item_path: /obj/item/weapon/storage/backpack/dufflebag/sec/fluff/katarina
-}
+#Woah, this one has a lot. Notably, an energy gun and a space suit. I don't think people should start with space suits. Commenting out. --C
+#{
+#ckey: joanrisu
+#character_name: Joan Risu
+#item_path: /obj/item/weapon/storage/backpack/dufflebag/sec/fluff/joanrisu
+#}
+# THIS ONE is full of combat knives. I don't think you can get those ingame? Commenting --C
+#{
+#ckey: joanrisu
+#character_name: Katarina Eine
+#item_path: /obj/item/weapon/storage/backpack/dufflebag/sec/fluff/katarina
+#}
 
 {
 ckey: joey4298
 character_name: Rosey Tasimaro Maximus
 item_path: /obj/item/clothing/head/fluff/threetail
 }
-
+#Full of mime stuff --C
 {
 ckey: joey4298
 character_name: Emoticon
@@ -335,13 +349,13 @@ ckey: kiraalitruss
 character_name: Amaya Rahl
 item_path: /obj/item/weapon/card/id/fluff/amaya
 }
-
+# Omnihud seems a bit abuse-y, but I'll keep it for now. --C
 {
 ckey: kisukegema
 character_name: Kisuke 'The Nerd' Gema
 item_path: /obj/item/clothing/glasses/omnihud/kamina
 }  
-
+# I'm pretty sure the ''knives'' in here are hatchet-level strength. Keeping it for now, can be removed later if they ever show up and abuse it --C
 {
 ckey: Killjaden
 character_name: Lassara Faaira'Nrezi
@@ -361,11 +375,13 @@ item_path: /obj/item/device/pda_mod/fluff/kligor
 }
 
 # ######## L CKEYS
-{
-ckey: luminescentring
-character_name: Briana Moore
-item_path: /obj/item/weapon/storage/box/fluff/briana_moore
-}
+#has a gun and permit. Can't tell if the gun is lethal or not. Commenting to be safe. --C
+#{
+#ckey: luminescentring
+#character_name: Briana Moore
+#item_path: /obj/item/weapon/storage/box/fluff/briana_moore
+#}
+# has nothing
 {
 ckey: luminescentring
 character_name: Briana Moore
@@ -392,6 +408,7 @@ item_path: /obj/item/clothing/head/fluff/molenar2
 }
 
 #Needs to renew permit
+#Again with this.... --C
 #{ 
 #ckey: molenar
 #character_name: Kari Akiren
@@ -403,7 +420,7 @@ item_path: /obj/item/clothing/head/fluff/molenar2
 #character_name: Kari Akiren
 #item_path: /obj/item/fluff/permit/kari_akiren
 #}
-
+#I think this is just a regular fully loaded toolbelt. Not a big deal unless they go around hacking into places --C
 {
 ckey: myryan
 character_name: Myryan Karnage-Cunningham
@@ -419,6 +436,7 @@ item_path: /obj/item/weapon/melee/fluff/holochain
 }
 
 # ######## P CKEYS
+# This one is actually pretty cool! Basically, you can use it and if your ckey is pontifexminimus, you can swap gender. Neat! --C
 {
 ckey: pontifexminimus
 character_name: Lucius Null
@@ -432,35 +450,39 @@ item_path: /obj/item/weapon/fluff/dragor_dot
 
 # ######## Q CKEYS
 # ######## R CKEYS
-{
-ckey: Razerwing
-character_name: Archer Maximus
-item_path: /obj/item/weapon/gun/projectile/colt/fluff/archercolt
-}
+#pew pew pew. No.
+#{
+#ckey: Razerwing
+#character_name: Archer Maximus
+#item_path: /obj/item/weapon/gun/projectile/colt/fluff/archercolt
+#}
 
-{
-ckey: Razerwing
-character_name: Archer Maximus
-item_path: /obj/item/fluff/permit/archermaximus
-}
+#{
+#ckey: Razerwing
+#character_name: Archer Maximus
+#item_path: /obj/item/fluff/permit/archermaximus
+#}
 
 # ######## S CKEYS
 {
 ckey: samanthafyre
 character_name: Kateryna Petrovitch
 item_path: /obj/item/clothing/suit/space/void/engineering/kate
+req_titles: Station Engineer, Atmospheric Technician, Chief Engineer
 }
 
 {
 ckey: samanthafyre
 character_name: Kateryna Petrovitch
 item_path: /obj/item/clothing/head/helmet/space/fluff/kate
+req_titles: Station Engineer, Atmospheric Technician, Chief Engineer
 }
 
 {
 ckey: samanthafyre
 character_name: Kateryna Petrovitch
 item_path: /obj/item/clothing/suit/armor/vest/wolftaur/kate
+req_titles: Security Officer, Warden, Detective, Head of Security, Head of Personnel, Captain
 }
 
 {
@@ -468,7 +490,7 @@ ckey: sasoperative
 character_name: Joseph Skinner
 item_path: /obj/item/clothing/accessory/medal/ERTservice
 }
-
+# permit for... what? --C
 {
 ckey: sasoperative
 character_name: Joseph Skinner
@@ -497,18 +519,20 @@ item_path: /obj/item/clothing/head/fluff/pompom
 ckey: scree
 character_name: Scree
 item_path: /obj/item/clothing/glasses/omnihud/eng/meson/fluff/scree
+req_titles: Station Engineer, Atmospheric Technician, Chief Engineer
 }
-
+# these can probably block flashes. Not a huge deal, probably. --C
 {
 ckey: seiga
 character_name: Alfonso Oak Telanor
 item_path: /obj/item/clothing/glasses/sunglasses/fluff/alfonso
 }
-
+# Sorry serds, you gotta play by our rules too. This contains a gun and armor. Probably not a big deal because I never see him outside of security. --C
 {
 ckey: silencedmp5a5
 character_name: Serdykov Antoz
 item_path: /obj/item/weapon/storage/box/fluff/serdy
+req_titles: Security Officer, Warden, Detective, Head of Security, Head of Personnel, Captain
 }
 
 {
@@ -528,7 +552,7 @@ ckey: silvertalismen
 character_name: Tasy Ruffles
 item_path: /obj/item/device/pda/clown
 }
-
+# just a fluffy bag. Nothing inside --C
 {
 ckey: Swat43
 character_name: Fortune Bloise
@@ -549,6 +573,7 @@ ckey: virgo113
 character_name: Verin Raharra
 item_path: /obj/item/clothing/suit/storage/hazardvest/fluff/verin
 }
+#Only issue I see with this is the cartridge. Trivial at best. --C
 {
 ckey: vorrarkul
 character_name: Lucina Dakarim
@@ -578,7 +603,7 @@ ckey: vorrarkul
 character_name: Theodora Lindt
 item_path: /obj/item/clothing/suit/chococoat
 }
-
+# Another weird boob thing. This one makes chocolate milk! --C
 {
 ckey: vorrarkul
 character_name: Theodora Lindt
@@ -626,26 +651,29 @@ item_path: /obj/item/clothing/glasses/threedglasses
 ckey: whiskyrose
 character_name: Vinjj
 item_path: /obj/item/clothing/head/welding/fluff/vinjj
+req_titles: Station Engineer, Atmospheric Technician, Chief Engineer, Roboticist
 }
 
 {
 ckey: wickedtemp
 character_name: Chakat Tempest
 item_path: /obj/item/clothing/glasses/omnihud/med/fluff/wickedtemphud
+req_titles: Medical Doctor, Chemist, Virologist, Geneticist, Chief Medical Officer
 }
 
 {
 ckey: wickedtemp
 character_name: Chakat Tempest
 item_path: /obj/item/weapon/reagent_containers/hypospray/vr/tempest
+req_titles: Chief Medical Officer
 }
-
+#nothing in this one --C
 {
 ckey: wickedtemp
 character_name: Chakat Tempest
 item_path: /obj/item/weapon/storage/backpack/saddlebag/tempest
 }
-
+# the last boobmilkmaker --C
 {
 ckey: wickedtemp
 character_name: Chakat Tempest
@@ -653,7 +681,7 @@ item_path: /obj/item/weapon/implanter/reagent_generator/tempest
 }
 
 # ######## X CKEYS
-
+# a custom swimsuit! --C
 {
 ckey: Xsdew
 character_name: Penelope Allen
@@ -673,7 +701,7 @@ ckey: zekesturm
 character_name: Zeke Arachi
 item_path: /obj/item/clothing/head/fluff/xeno
 }
-
+# These don't have any keys, so they should be fine --C
 {
 ckey: zodiacshadow
 character_name: Nehi Maximus
@@ -682,7 +710,7 @@ item_path: /obj/item/device/radio/headset/fluff/zodiacshadow
 
 
 # ######## ARFS DONATIONS
-
+## NERDS GO HERE --C
 # ######## A CKEYS
 
 {
@@ -708,12 +736,18 @@ ckey: cebutris
 character_name: Wolfy Tubek
 item_path: /obj/item/weapon/soap/cebusoap
 }
-
+{
+ckey: cebutris
+character_name: Wolfy Tubek
+item_path: /obj/item/device/pda/awoo
+}
+## >:3 --C
 # ######## G CKEYS
 {
 ckey: gozulio
 character_name: Jessie Glitterpaws
 item_path: /obj/item/clothing/suit/radiation/gozu
+req_titles: Station Engineer, Atmospheric Technician, Chief Engineer
 }
 
 {
@@ -721,6 +755,7 @@ ckey: gozulio
 character_name: Jessie Glitterpaws
 req_access: 11
 item_path: /obj/item/clothing/head/radiation/gozu
+req_titles: Station Engineer, Atmospheric Technician, Chief Engineer
 }
 
 # ######## K CKEYS
@@ -755,7 +790,7 @@ ckey: technicalmagi
 character_name: Naomi Reids
 item_path: /obj/item/clothing/under/bb/sweater/worn
 }
-
+## wow what a snowflake wtf --C
 {
 ckey: technicalmagi
 character_name: Naomi Reids

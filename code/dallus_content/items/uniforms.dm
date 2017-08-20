@@ -463,3 +463,12 @@
 	name = "blue singer's outfit"
 	desc = "robotic voice not included"
 	icon_state = "bsing"
+
+
+/obj/item/clothing/under/swimsuit/lifeguard
+	name = "lifeguard swimsuit"
+	desc = "a bright red swimsuit marking the wearer as a lifeguard."
+	icon = 'code/dallus_content/icons/uniform-obj.dmi'
+	icon_state = "lifeguard"
+	icon_override = 'code/dallus_content/icons/uniforms1.dmi' //the on-mob icon file since they fill up fast
+	item_state = "lifeguard"

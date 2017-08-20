@@ -164,7 +164,7 @@
 	..()
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
 
-/*
+
 /datum/species/skrell
 	name = "Skrell"
 	name_plural = "Skrell"
@@ -220,7 +220,7 @@
 
 /datum/species/skrell/can_breathe_water()
 	return TRUE
-
+/*
 /datum/species/diona
 	name = "Diona"
 	name_plural = "Dionaea"

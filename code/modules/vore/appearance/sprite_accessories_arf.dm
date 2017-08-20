@@ -145,6 +145,18 @@
 	icon_state = "absol"
 	do_colouration = 1
 
+/datum/sprite_accessory/tail/absol
+	name = "absol, colorable"
+	desc = ""
+	icon_state = "absol"
+	do_colouration = 1
+
+/datum/sprite_accessory/tail/acaelius
+	name = "USB tail"
+	desc = ""
+	icon_state = "acaelius"
+	do_colouration = 1
+	ckeys_allowed = list("acaelius")
 
 /*
 ////////////////////////////
