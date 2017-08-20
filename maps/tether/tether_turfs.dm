@@ -89,3 +89,10 @@ VIRGO3B_TURF_CREATE(/turf/simulated/mineral)
 /obj/effect/transit/light
 	icon = 'icons/turf/transit_128.dmi'
 	icon_state = "tube1-2"
+
+/turf/simulated/floor/outdoors/snow/odin5
+	carbon_dioxide = 82
+	oxygen = 16
+	nitrogen = 12
+
+/turf/unsimulated/wall/planetary/odin5

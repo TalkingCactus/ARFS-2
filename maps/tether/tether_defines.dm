@@ -38,15 +38,15 @@
 #define Z_LEVEL_EMPTY_SPACE				14
 
 
-/datum/map/tether
-	name = "Virgo"
-	full_name = "NSB Adephagia"
+/datum/map/odin5
+	name = "Odin 5"
+	full_name = "Lupus Prime"
 	path = "tether"
 
-	zlevel_datum_type = /datum/map_z_level/tether
+	zlevel_datum_type = /datum/map_z_level/odin5
 
-	lobby_icon = 'icons/misc/title_vr.dmi'
-	lobby_screens = list("tether")
+	lobby_icon = 'icons/misc/title.dmi'
+	lobby_screens = list("arfs")
 
 	holomap_smoosh = list(list(
 		Z_LEVEL_SURFACE_LOW,
@@ -56,21 +56,21 @@
 		Z_LEVEL_SPACE_MID,
 		Z_LEVEL_SPACE_HIGH))
 
-	station_name  = "NSB Tether"
-	station_short = "Tether"
-	dock_name     = "Virgo 3b Colony"
-	boss_name     = "Central Command"
-	boss_short    = "CentCom"
-	company_name  = "NanoTrasen"
-	company_short = "NT"
-	starsys_name  = "Virgo-Erigone"
+	station_name  = "Lupus Prime"
+	station_short = "Lupus Prime"
+	dock_name     = "Hyperloop station"
+	boss_name     = "ARF-Command"
+	boss_short    = "Command"
+	company_name  = "Alliance of Racial Federations"
+	company_short = "ARF"
+	starsys_name  = "Canis Majoris"
 
-	shuttle_docked_message = "The scheduled Orange Line tram to the %dock_name% has arrived. It will depart in approximately %ETD%."
-	shuttle_leaving_dock = "The Orange Line tram has left the station. Estimate %ETA% until the tram arrives at %dock_name%."
-	shuttle_called_message = "A scheduled crew transfer to the %dock_name% is occuring. The tram will be arriving shortly. Those departing should proceed to the Orange Line tram station within %ETA%."
+	shuttle_docked_message = "The scheduled Hyperloop tram to the %dock_name% has arrived. It will depart in approximately %ETD%."
+	shuttle_leaving_dock = "The Hyperloop tram has left the station. Estimate %ETA% until the tram arrives at %dock_name%."
+	shuttle_called_message = "A scheduled crew transfer to the %dock_name% is occuring. The tram will be arriving shortly. Those departing should proceed to the Hyperloop tram station within %ETA%."
 	shuttle_recall_message = "The scheduled crew transfer has been cancelled."
 	emergency_shuttle_docked_message = "The evacuation tram has arrived at the tram station. You have approximately %ETD% to board the tram."
-	emergency_shuttle_leaving_dock = "The emergency tram has left the station. Estimate %ETA% until the shuttle arrives at %dock_name%."
+	emergency_shuttle_leaving_dock = "The emergency tram has left the station. Estimate %ETA% until the tram arrives at %dock_name%."
 	emergency_shuttle_called_message = "An emergency evacuation has begun, and an off-schedule tram has been called. It will arrive at the tram station in approximately %ETA%."
 	emergency_shuttle_recall_message = "The evacuation tram has been recalled."
 
@@ -93,7 +93,7 @@
 							NETWORK_INTERROGATION
 							)
 
-	allowed_spawns = list("Tram Station","Gateway","Cryogenic Storage","Cyborg Storage")
+	allowed_spawns = list("Tram Station","Cryogenic Storage","Cyborg Storage")
 
 
 /datum/map/tether/perform_map_generation()
@@ -130,38 +130,38 @@
 #define TETHER_HOLOMAP_MARGIN_Y ((HOLOMAP_ICON_SIZE - (3*TETHER_MAP_SIZE)) / 2) // 60
 
 // We have a bunch of stuff common to the station z levels
-/datum/map_z_level/tether/station
+/datum/map_z_level/odin5/station
 	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES
 	holomap_legend_x = 220
 	holomap_legend_y = 160
 
-/datum/map_z_level/tether/station/surface_low
+/datum/map_z_level/odin5/station/surface_low
 	z = Z_LEVEL_SURFACE_LOW
 	name = "Surface 1"
-	base_turf = /turf/simulated/floor/outdoors/rocks/virgo3b
+	base_turf = /turf/simulated/floor/outdoors/snow/odin5
 	holomap_offset_x = TETHER_HOLOMAP_MARGIN_X
 	holomap_offset_y = TETHER_HOLOMAP_MARGIN_Y + TETHER_MAP_SIZE*0
 
-/datum/map_z_level/tether/station/surface_mid
+/datum/map_z_level/odin5/station/surface_mid
 	z = Z_LEVEL_SURFACE_MID
 	name = "Surface 2"
 	base_turf = /turf/simulated/open
 	holomap_offset_x = TETHER_HOLOMAP_MARGIN_X
 	holomap_offset_y = TETHER_HOLOMAP_MARGIN_Y + TETHER_MAP_SIZE*1
 
-/datum/map_z_level/tether/station/surface_high
+/datum/map_z_level/odin5/station/surface_high
 	z = Z_LEVEL_SURFACE_HIGH
 	name = "Surface 3"
 	base_turf = /turf/simulated/open
 	holomap_offset_x = TETHER_HOLOMAP_MARGIN_X
 	holomap_offset_y = TETHER_HOLOMAP_MARGIN_Y + TETHER_MAP_SIZE*2
 
-/datum/map_z_level/tether/transit
+/datum/map_z_level/odin5/transit
 	z = Z_LEVEL_TRANSIT
 	name = "Transit"
 	flags = MAP_LEVEL_SEALED|MAP_LEVEL_PLAYER|MAP_LEVEL_CONTACT
 
-/datum/map_z_level/tether/station/space_low
+/datum/map_z_level/odin5/station/space_low
 	z = Z_LEVEL_SPACE_LOW
 	name = "Asteroid 1"
 	base_turf = /turf/space
@@ -169,7 +169,7 @@
 	holomap_offset_x = HOLOMAP_ICON_SIZE - TETHER_HOLOMAP_MARGIN_X - TETHER_MAP_SIZE
 	holomap_offset_y = TETHER_HOLOMAP_MARGIN_Y + TETHER_MAP_SIZE*0
 
-/datum/map_z_level/tether/station/space_mid
+/datum/map_z_level/odin5/station/space_mid
 	z = Z_LEVEL_SPACE_MID
 	name = "Asteroid 2"
 	base_turf = /turf/simulated/open
@@ -177,7 +177,7 @@
 	holomap_offset_x = HOLOMAP_ICON_SIZE - TETHER_HOLOMAP_MARGIN_X - TETHER_MAP_SIZE
 	holomap_offset_y = TETHER_HOLOMAP_MARGIN_Y + TETHER_MAP_SIZE*1
 
-/datum/map_z_level/tether/station/space_high
+/datum/map_z_level/odin5/station/space_high
 	z = Z_LEVEL_SPACE_HIGH
 	name = "Asteroid 3"
 	base_turf = /turf/simulated/open
@@ -185,40 +185,40 @@
 	holomap_offset_x = HOLOMAP_ICON_SIZE - TETHER_HOLOMAP_MARGIN_X - TETHER_MAP_SIZE
 	holomap_offset_y = TETHER_HOLOMAP_MARGIN_Y + TETHER_MAP_SIZE*2
 
-/datum/map_z_level/tether/mine
+/datum/map_z_level/odin5/mine
 	z = Z_LEVEL_SURFACE_MINE
 	name = "Mining Outpost"
 	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER
 	base_turf = /turf/simulated/floor/outdoors/rocks/virgo3b
 
-/datum/map_z_level/tether/solars
+/datum/map_z_level/odin5/solars
 	z = Z_LEVEL_SOLARS
 	name = "Solar Field"
 	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER
 	base_turf = /turf/simulated/floor/outdoors/rocks/virgo3b
 
-/datum/map_z_level/tether/colony
+/datum/map_z_level/odin5/colony
 	z = Z_LEVEL_CENTCOM
 	name = "Colony"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT
 
-/datum/map_z_level/tether/misc
+/datum/map_z_level/odin5/misc
 	z = Z_LEVEL_MISC
 	name = "Misc"
 	flags = MAP_LEVEL_ADMIN
 
-/datum/map_z_level/tether/ships
+/datum/map_z_level/odin5/ships
 	z = Z_LEVEL_SHIPS
 	name = "Ships"
 	flags = 0
 
-/datum/map_z_level/tether/empty_surface
+/datum/map_z_level/odin5/empty_surface
 	z = Z_LEVEL_EMPTY_SURFACE
 	name = "Empty"
 	flags = MAP_LEVEL_PLAYER
 	base_turf = /turf/simulated/floor/outdoors/rocks/virgo3b
 
-/datum/map_z_level/tether/empty_space
+/datum/map_z_level/odin5/empty_space
 	z = Z_LEVEL_EMPTY_SPACE
 	name = "Empty"
 	flags = MAP_LEVEL_PLAYER

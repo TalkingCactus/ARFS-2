@@ -1,14 +1,16 @@
-var/datum/planet/virgo3b/planet_virgo3b = null
+var/datum/planet/odin5/planet_odin5 = null
 
-/datum/time/virgo3b
+/datum/time/odin5
 	seconds_in_day = 3 HOURS
 
-/datum/planet/virgo3b
-	name = "Virgo3b"
-	desc = "A mid-sized moon of the Virgo 3 gas giant, this planet has an atmosphere mainly comprised of phoron, with trace \
-	amounts of both oxygen and nitrogen. Fortunately, the oxygen is not enough to be combustible in any meaningful way, however \
-	the phoron is desirable by many corporations, including Nanotrasen."
-	current_time = new /datum/time/virgo3b()
+/datum/planet/odin5
+	name = "Odin5"
+	desc = "A home planet to many wolf clans and other vulpkanin subspecies, Odin 5 is a \
+		freezing wasteland of a planet whose surface is largely covered in huge water-ice sheets and menacing mountains. \
+		Flowing water exists in minimal quantities along the equator and near volcanic thermal vents. Most cities and towns consist of varying sized biodomes which house \
+		everything from homes to entire self sustaining ecosystems. A massive hyperloop network connects the major points of interest and allows for unprecedented swiftness \
+		with trading and commerce."
+	current_time = new /datum/time/odin5()
 	expected_z_levels = list(
 						Z_LEVEL_SURFACE_LOW,
 						Z_LEVEL_SURFACE_MID,
@@ -16,14 +18,14 @@ var/datum/planet/virgo3b/planet_virgo3b = null
 						Z_LEVEL_SURFACE_MINE,
 						Z_LEVEL_SOLARS
 						)
-	planetary_wall_type = /turf/unsimulated/wall/planetary/virgo3b
+	planetary_wall_type = /turf/unsimulated/wall/planetary/odin5
 
-/datum/planet/virgo3b/New()
+/datum/planet/odin5/New()
 	..()
-	planet_virgo3b = src
-	weather_holder = new /datum/weather_holder/virgo3b(src)
+	planet_odin5 = src
+	weather_holder = new /datum/weather_holder/odin5(src)
 
-/datum/planet/virgo3b/update_sun()
+/datum/planet/odin5/update_sun()
 	..()
 	var/datum/time/time = current_time
 	var/length_of_day = time.seconds_in_day / 10 / 60 / 60
@@ -103,55 +105,52 @@ var/datum/planet/virgo3b/planet_virgo3b = null
 		update_sun_deferred(2, new_brightness, new_color)
 
 
-/datum/weather_holder/virgo3b
-	temperature = T0C
+/datum/weather_holder/odin5
+	temperature = (T0C-10)
 	allowed_weather_types = list(
-		WEATHER_CLEAR		= new /datum/weather/virgo3b/clear(),
-		WEATHER_OVERCAST	= new /datum/weather/virgo3b/overcast(),
-		WEATHER_LIGHT_SNOW	= new /datum/weather/virgo3b/light_snow(),
-		WEATHER_SNOW		= new /datum/weather/virgo3b/snow(),
-		WEATHER_BLIZZARD	= new /datum/weather/virgo3b/blizzard(),
-		WEATHER_RAIN		= new /datum/weather/virgo3b/rain(),
-		WEATHER_STORM		= new /datum/weather/virgo3b/storm(),
-		WEATHER_HAIL		= new /datum/weather/virgo3b/hail(),
-		WEATHER_BLOOD_MOON	= new /datum/weather/virgo3b/blood_moon()
+		WEATHER_CLEAR		= new /datum/weather/odin5/clear(),
+		WEATHER_OVERCAST	= new /datum/weather/odin5/overcast(),
+		WEATHER_LIGHT_SNOW	= new /datum/weather/odin5/light_snow(),
+		WEATHER_SNOW		= new /datum/weather/odin5/snow(),
+		WEATHER_BLIZZARD	= new /datum/weather/odin5/blizzard(),
+		WEATHER_STORM		= new /datum/weather/odin5/storm(),
+		WEATHER_HAIL		= new /datum/weather/odin5/hail(),
+		WEATHER_BLOOD_MOON	= new /datum/weather/odin5/blood_moon()
 		)
 	roundstart_weather_chances = list(
 		WEATHER_CLEAR		= 30,
 		WEATHER_OVERCAST	= 30,
 		WEATHER_LIGHT_SNOW	= 20,
-		WEATHER_SNOW		= 5,
+		WEATHER_SNOW		= 10,
 		WEATHER_BLIZZARD	= 5,
-		WEATHER_RAIN		= 5,
 		WEATHER_STORM		= 2.5,
 		WEATHER_HAIL		= 2.5
 		)
 
-datum/weather/virgo3b
-	name = "virgo3b base"
+datum/weather/odin5
+	name = "odin5 base"
 	temp_high = 243.15 // -20c
 	temp_low = 233.15  // -30c
 
-/datum/weather/virgo3b/clear
+/datum/weather/odin5/clear
 	name = "clear"
 	transition_chances = list(
 		WEATHER_CLEAR = 60,
 		WEATHER_OVERCAST = 40
 		)
 
-/datum/weather/virgo3b/overcast
+/datum/weather/odin5/overcast
 	name = "overcast"
 	light_modifier = 0.8
 	transition_chances = list(
 		WEATHER_CLEAR = 25,
-		WEATHER_OVERCAST = 50,
-		WEATHER_LIGHT_SNOW = 10,
+		WEATHER_OVERCAST = 15,
+		WEATHER_LIGHT_SNOW = 50,
 		WEATHER_SNOW = 5,
-		WEATHER_RAIN = 5,
 		WEATHER_HAIL = 5
 		)
 
-/datum/weather/virgo3b/light_snow
+/datum/weather/odin5/light_snow
 	name = "light snow"
 	icon_state = "snowfall_light"
 	temp_high = 238.15 // -25c
@@ -164,7 +163,7 @@ datum/weather/virgo3b
 		WEATHER_HAIL = 5
 		)
 
-/datum/weather/virgo3b/snow
+/datum/weather/odin5/snow
 	name = "moderate snow"
 	icon_state = "snowfall_med"
 	temp_high = 233.15 // -30c
@@ -178,7 +177,7 @@ datum/weather/virgo3b
 		WEATHER_OVERCAST = 5
 		)
 
-/datum/weather/virgo3b/snow/process_effects()
+/datum/weather/odin5/snow/process_effects()
 	for(var/turf/simulated/floor/outdoors/snow/S in outdoor_turfs)
 		if(S.z in holder.our_planet.expected_z_levels)
 			for(var/dir_checked in cardinal)
@@ -187,7 +186,7 @@ datum/weather/virgo3b
 					if(istype(T, /turf/simulated/floor/outdoors) && prob(33))
 						T.chill()
 
-/datum/weather/virgo3b/blizzard
+/datum/weather/odin5/blizzard
 	name = "blizzard"
 	icon_state = "snowfall_heavy"
 	temp_high = 223.15 // -40c
@@ -200,7 +199,7 @@ datum/weather/virgo3b
 		WEATHER_OVERCAST = 5
 		)
 
-/datum/weather/virgo3b/blizzard/process_effects()
+/datum/weather/odin5/blizzard/process_effects()
 	for(var/turf/simulated/floor/outdoors/snow/S in outdoor_turfs)
 		if(S.z in holder.our_planet.expected_z_levels)
 			for(var/dir_checked in cardinal)
@@ -209,7 +208,7 @@ datum/weather/virgo3b
 					if(istype(T, /turf/simulated/floor/outdoors) && prob(50))
 						T.chill()
 
-/datum/weather/virgo3b/rain
+/datum/weather/odin5/rain
 	name = "rain"
 	icon_state = "rain"
 	light_modifier = 0.5
@@ -221,7 +220,7 @@ datum/weather/virgo3b
 		WEATHER_HAIL = 5
 		)
 
-/datum/weather/virgo3b/rain/process_effects()
+/datum/weather/odin5/rain/process_effects()
 	for(var/mob/living/L in living_mob_list)
 		if(L.z in holder.our_planet.expected_z_levels)
 			var/turf/T = get_turf(L)
@@ -231,20 +230,19 @@ datum/weather/virgo3b
 			L.adjust_fire_stacks(-5)
 			to_chat(L, "<span class='warning'>Rain falls on you.</span>")
 
-/datum/weather/virgo3b/storm
+/datum/weather/odin5/storm
 	name = "storm"
 	icon_state = "storm"
 	temp_high = 233.15 // -30c
 	temp_low = 213.15  // -50c
 	light_modifier = 0.3
 	transition_chances = list(
-		WEATHER_RAIN = 45,
 		WEATHER_STORM = 40,
 		WEATHER_HAIL = 10,
 		WEATHER_OVERCAST = 5
 		)
 
-/datum/weather/virgo3b/rain/process_effects()
+/datum/weather/odin5/rain/process_effects()
 	for(var/mob/living/L in living_mob_list)
 		if(L.z in holder.our_planet.expected_z_levels)
 			var/turf/T = get_turf(L)
@@ -254,20 +252,19 @@ datum/weather/virgo3b
 			L.adjust_fire_stacks(-10)
 			to_chat(L, "<span class='warning'>Rain falls on you, drenching you in water.</span>")
 
-/datum/weather/virgo3b/hail
+/datum/weather/odin5/hail
 	name = "hail"
 	icon_state = "hail"
 	temp_high = 233.15 // -30c
 	temp_low = 213.15  // -50c
 	light_modifier = 0.3
 	transition_chances = list(
-		WEATHER_RAIN = 45,
 		WEATHER_STORM = 10,
 		WEATHER_HAIL = 40,
 		WEATHER_OVERCAST = 5
 		)
 
-/datum/weather/virgo3b/hail/process_effects()
+/datum/weather/odin5/hail/process_effects()
 	for(var/mob/living/L in living_mob_list)
 		if(L.z in holder.our_planet.expected_z_levels)
 			var/turf/T = get_turf(L)
@@ -287,7 +284,7 @@ datum/weather/virgo3b
 			L.apply_damage(rand(5, 10), BRUTE, target_zone, amount_blocked, amount_soaked, used_weapon = "hail")
 			to_chat(L, "<span class='warning'>The hail raining down on you [L.can_feel_pain() ? "hurts" : "damages you"]!</span>")
 
-/datum/weather/virgo3b/blood_moon
+/datum/weather/odin5/blood_moon
 	name = "blood moon"
 	light_modifier = 0.5
 	light_color = "#FF0000"

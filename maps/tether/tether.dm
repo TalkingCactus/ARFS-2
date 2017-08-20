@@ -8,7 +8,7 @@
 	#include "tether_areas2.dm"
 	#include "tether_shuttles.dm"
 	#include "tether_telecomms.dm"
-	#include "tether_virgo3b.dm"
+	#include "tether_odin5.dm"
 
 	#include "tether-01-surface.dmm"
 	#include "tether-02-transit.dmm"
@@ -21,7 +21,7 @@
 	#include "tether-09-empty-surface.dmm"
 	#include "tether-10-empty-space.dmm"
 
-	#define USING_MAP_DATUM /datum/map/tether
+	#define USING_MAP_DATUM /datum/map/odin5
 
 #elif !defined(MAP_OVERRIDE)
 
