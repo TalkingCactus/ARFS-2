@@ -189,6 +189,7 @@
 #include "code\dallus_content\donator_items\weapons.dm"
 #include "code\dallus_content\donator_items\rune_cart\chemicals.dm"
 #include "code\dallus_content\donator_items\rune_cart\drinks.dm"
+#include "code\dallus_content\items\boxes.dm"
 #include "code\dallus_content\items\gloves.dm"
 #include "code\dallus_content\items\hats.dm"
 #include "code\dallus_content\items\masks.dm"
