@@ -63,7 +63,7 @@
 	boss_short    = "Command"
 	company_name  = "Alliance of Racial Federations"
 	company_short = "ARF"
-	starsys_name  = "Canis Majoris"
+	starsys_name  = "Odin"
 
 	shuttle_docked_message = "The scheduled Hyperloop tram to the %dock_name% has arrived. It will depart in approximately %ETD%."
 	shuttle_leaving_dock = "The Hyperloop tram has left the station. Estimate %ETA% until the tram arrives at %dock_name%."
